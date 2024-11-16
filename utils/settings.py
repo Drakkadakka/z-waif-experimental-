@@ -21,3 +21,15 @@ vtube_enabled = True
 discord_enabled = True
 rag_enabled = True
 vision_enabled = True
+
+# Twitch Settings
+TWITCH_ENABLED = True
+TWITCH_DEBUG_LOGGING = True
+
+# Rate Limiting Settings
+TWITCH_RATE_LIMIT_MESSAGES = 20  # Maximum messages per time window
+TWITCH_RATE_LIMIT_SECONDS = 30   # Time window in seconds
+TWITCH_MESSAGE_COOLDOWN = 2.0    # Minimum seconds between messages
+
+# Other Twitch Settings
+TWITCH_MAX_RESPONSE_LENGTH = 500  # Maximum length of responses
