@@ -8,31 +8,14 @@
             "hey sweetie",
             "*smiles* Oh, I missed you, too! What have you been up to? *leans in closer*"
         ],
-        [
-            "hey",
-            "Hi, Alexcia. It has been some time since we last spoke. What have you been up to?"
-        ],
-        [
-            "hru\\",
-            "Well, I've been doing a lot of things. *sighs* Life has been hectic with work and everything. But you know how it is, right? We're all just trying to get by.\n"
-        ]
+  
     ],
     "visible": [
         [
             "",
             "Hello! I&#x27;ve missed you"
         ],
-        [
-            "hey sweetie",
-            "*smiles* Oh, I missed you, too! What have you been up to? *leans in closer*"
-        ],
-        [
-            "hey",
-            "Hi, Alexcia. It has been some time since we last spoke. What have you been up to?"
-        ],
-        [
-            "hru\\",
-            "Well, I&#x27;ve been doing a lot of things. *sighs* Life has been hectic with work and everything. But you know how it is, right? We&#x27;re all just trying to get by.\n"
+        
         ]
     ]
 }
