@@ -1,7 +1,6 @@
 opencv-python
 gradio==4.36.1
 keyboard~=0.13.5
-scipy>=1.11.0
 mouse~=0.7.1
 PyGetWindow~=0.0.9
 PythMC~=1.2.2
@@ -17,12 +16,3 @@ pydub~=0.25.1
 pyvts~=0.3.2
 numpy~=1.24.4
 fastapi==0.112.2
-twitchio>=2.8.2
-websockets>=11.0.3
-pathlib
-sentence-transformers>=2.2.0
---find-links https://download.pytorch.org/whl/cu118
-torch
-torchvision
-torchaudio
-

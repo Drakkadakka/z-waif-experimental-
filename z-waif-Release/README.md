@@ -18,31 +18,24 @@ The goal of the project is less about giving an "all in one package", and moreso
 	- Speak back and forth, using Whisper text to speech.
  	- Configure your own waifu's voice with thousands of possible models.
   	- Imperial-tons of quality of life tweaks.
-    - Enhanced model stability and resource management.
 
 - 🍄 Vtuber Integration &nbsp; &nbsp; &emsp; &emsp; ღゝ◡╹ )ノ♡
 
 	- Uses VTube Studio, and any compatible models!
  	- Ability to send emotes to the model, based on thier actions.
 	- Idle / Speaking animation.
-    - Twitch chat integration for live interaction!
-    - Stream overlay support with customizable themes.
-
 - 💾 Enhanced Memory &nbsp; &nbsp; &nbsp; &emsp; &emsp; (ー_ーゞ
 	- Add Lorebook entries, for your waifu to remember a wide array of info as needed.
  	- Enable the custom RAG, giving your them knowledge of older conversations.
-    - Import old logs and conversations, keeping your same AI waifu from another software!
-    - Improved resource cleanup and memory management.
-
+    	- Import old logs and conversations, keeping your same AI waifu from another software!
 - 🎮 Modularity &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp; ⌌⌈ ╹므╹⌉⌏
 	- Enable various built in modules;
  		- Discord, for messaging.
 		- Vision, to enable multimodal, and allow them to see!
    	 	- Alarm, so your waifu can wake you up in the morning.
-     	- Minecraft, allowing your waifu to control the game using Baritone, Wurst, and other command based mods.
-        - Twitch, for live streaming interaction and chat moderation.
+     	 - Minecraft, allowing your waifu to control the game using Baritone, Wurst, and other command based mods.
 	- All the options and modularity from any external software used. Oobabogoa, RVC Voice, ect.
-    - Enhanced error handling and module initialization.
+	- Open-source, meaning you can edit it as you please.
 
 ## YouTube Showcase
 
@@ -55,21 +48,6 @@ Credit to [this other AI waifu project](https://github.com/TumblerWarren/Virtual
 
 
 ## Changelog
-
-V1.4
-- Fixed critical model initialization bug
-  - Resolved issues with model not being properly defined in chat handler
-  - Improved error handling for model generation
-  - Added proper cleanup of resources
-
-V1.3
-- Added advanced Twitch integration
-  - Full Twitch chat interaction support
-  - Per-user memory system that maintains a year of interaction history
-  - Personalized responses based on user chat history
-  - Automatic memory cleanup for interactions older than 365 days
-  - Memory persistence between bot restarts
-  - Enhanced AI parameters for natural chat interaction
 
 V1.2
 
@@ -138,99 +116,11 @@ V1.0
 	- Hotkeys
 	- Various other initial release items
 
-## Twitch Setup Instructions
-
-To enable Twitch chat integration:
-
-1. Create a Twitch Application:
-   - Go to [Twitch Developer Console](https://dev.twitch.tv/console)
-   - Create a new application
-   - Set OAuth Redirect URL to `http://localhost:3000`
-   - Save the Client ID
-
-2. Generate Access Tokens:
-   - Visit [Twitch Token Generator](https://twitchtokengenerator.com)
-   - Select 'Bot Chat Token'
-   - Grant required permissions (chat:read, chat:edit)
-   - Save the Access Token and Refresh Token
-
-3. Update your `.env` file with:
-   ```
-   TWITCH_TOKEN=your_access_token
-   TWITCH_REFRESH_TOKEN=your_refresh_token
-   TWITCH_CLIENT_ID=your_client_id
-   TWITCH_CHANNEL=your_channel_name
-   ```
-
-4. Enable the Twitch module in settings
-
-Your AI will now interact with Twitch chat, maintaining conversation history for each user for up to 365 days.
-
 ## Current To-Do
 
-### 🎯 High Priority
-- [ ] Multi-language support with automatic translation
-- [ ] Plugin SDK for community-made modules
-- [ ] Motion capture support for dynamic reactions
-- [ ] Smart Home Integration module
-  - [ ] Phillips Hue integration
-  - [ ] Spotify/Music control
-  - [ ] Temperature control
-
-### 🧠 AI Enhancements
-- [ ] Context-aware emotional responses
-  - [ ] Voice tone matching
-  - [ ] Dynamic expression mapping
-- [ ] Emotional memory tracking system
-- [ ] Cross-session learning implementation
-- [ ] Custom personality templates
-- [ ] Character relationship tracking
-
-### 🎬 VTuber Features
-- [ ] Collaborative streaming with multiple AI models
-- [ ] Real-time background scene switching
-- [ ] Custom animation trigger system
-  - [ ] User-defined triggers
-  - [ ] Event-based animations
-- [ ] Scene composition tools
-- [ ] Dynamic background environments
-
-### 🛠️ Technical Improvements
-- [ ] Memory categorization and priority system
-- [ ] Custom memory pruning rules
-- [ ] Performance optimization tools
-- [ ] Debug mode for module testing
-- [ ] Cross-module interaction system
-- [ ] Batch conversation processing
-
-### 📱 New Modules
-- [ ] Calendar Sync
-  - [ ] Google Calendar integration
-  - [ ] Outlook support
-- [ ] Weather Integration
-- [ ] Browser Extension
-  - [ ] Chrome/Firefox support
-  - [ ] Web browsing assistance
-- [ ] Music Player Control
-  - [ ] Mood-based playlists
-  - [ ] Voice commands
-
-### 💅 UI/UX Improvements
-- [ ] Custom UI themes and layouts
-- [ ] Voice pack management system
-- [ ] Character appearance presets
-- [ ] Custom reaction sets and emotes
-- [ ] Conversation analytics dashboard
-- [ ] Advanced prompt engineering interface
-
-### 📊 Analytics & Export
-- [ ] Conversation analytics and insights
-- [ ] Export tools for content creation
-- [ ] Performance metrics tracking
-- [ ] Usage statistics dashboard
-
-### 🧪 Experimental Features
-- [ ] Multi-model conversation mixing
-- [ ] Advanced context switching
-- [ ] Dynamic personality evolution
-- [ ] Real-time voice style transfer
+- Make the RAG/Long Term Memory be multiprocessed for better performance
+- Look more into optimal LLMs and configs
+- Give internal dialouging
+- Fix issues where leaving the bot on for a while can cause a bit more lag between messages
+- Fix issues where leaving the WebUI open a long time can freeze it and spike CPU usage
+- Create more Youtube tutorials and other related content

@@ -27,8 +27,6 @@ import utils.settings
 import utils.retrospect
 import utils.based_rag
 
-from utils import settings
-from utils.z_waif_twitch import start_twitch_bot
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -40,53 +38,6 @@ stored_transcript = "Issue with message cycling!"
 
 undo_allowed = False
 
-from utils.user_context import get_user_context, update_user_context
-from utils.chat_history import get_chat_history, update_chat_history
-from utils.message_processing import clean_response
-
-async def main_twitch_chat(message_data):
-    """
-    Handle Twitch chat messages with personalized AI responses
-    """
-    try:
-        # Get user context and history
-        user_context = "New user"  # Simplified for initial implementation
-        chat_history = "No previous chat history"  # Simplified for initial implementation
-        
-        # Build personalized system prompt
-        system_prompt = f"""You are chatting on Twitch in the channel {message_data['channel']}.
-        You are a friendly AI assistant who loves to chat with viewers.
-        Keep responses short and engaging, suitable for Twitch chat.
-        Current user: {message_data['author']}
-        """
-        
-        # Format the complete message for the LLM
-        formatted_message = f"""
-        System: {system_prompt}
-        
-        User [{message_data['author']}]: {message_data['content']}
-        Assistant: """
-
-        # Send to Oogabooga and get response
-        API.Oogabooga_Api_Support.send_via_oogabooga(formatted_message)
-        reply_message = API.Oogabooga_Api_Support.receive_via_oogabooga()
-        
-        # Clean response
-        reply_message = ' '.join(reply_message.split())  # Remove extra whitespace
-        if len(reply_message) > 500:  # Twitch character limit
-            reply_message = reply_message[:497] + "..."
-        
-        message_checks(reply_message)
-        
-        # Speak if enabled
-        if utils.settings.speak_shadowchats:
-            main_message_speak()
-            
-        return reply_message
-        
-    except Exception as e:
-        print(f"Error in main_twitch_chat: {e}")
-        return "Sorry, I encountered an error processing your message."
 
 # noinspection PyBroadException
 def main():
@@ -672,11 +623,7 @@ def run_program():
     gradio_thread.daemon = True
     gradio_thread.start()
 
-    # Initialize Twitch if enabled
-    if settings.TWITCH_ENABLED:
-        twitch_thread = threading.Thread(target=start_twitch_bot, daemon=True)
-        twitch_thread.start()
-        print("Twitch module initialized")
+
 
 
     # Run the primary loop
