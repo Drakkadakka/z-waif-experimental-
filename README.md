@@ -1,3 +1,5 @@
+THIS IS EXPERIMENTAL 
+
 # z-waif
 Fully local &amp; open source AI Waifu. VTube Studio, Discord, Minecraft, custom made RAG (long term memory), alarm, and plenty more! Has a WebUI and hotkey shortcuts. All software is free (or extremely cheap)!
 
