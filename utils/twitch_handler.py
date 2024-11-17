@@ -12,6 +12,7 @@ class TwitchHandler:
         rag_processor = MultiprocessRAG(embedding_model)
         self.memory_manager = MemoryManager(rag_processor)
         self.ai = AIHandler()
+        self.speak_shadowchats = True
         
     async def process(self, message_data):
         if message_data.get('needs_ai_response', False):
@@ -34,6 +35,8 @@ class TwitchHandler:
             )
             
             response = await self.ai.generate_response(prompt)
+            if self.speak_shadowchats:
+                await self.speak_message(message_data['content'])
             return response
         return None
         
@@ -46,3 +49,7 @@ Relevant memories:
 Current interaction:
 {username}: {content}
 Assistant: """ 
+
+    async def speak_message(self, message):
+        print(f"Speaking message: {message}")
+        

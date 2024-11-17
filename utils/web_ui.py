@@ -290,15 +290,12 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
         with gr.Row():
             def shadowchats_button_click():
                 utils.settings.speak_shadowchats = not utils.settings.speak_shadowchats
-
                 return
 
+            shadowchats_button = gr.Button(value="Check/Uncheck")
+            shadowchats_button.click(fn=shadowchats_button_click)
 
-            with gr.Row():
-                shadowchats_button = gr.Button(value="Check/Uncheck")
-                shadowchats_button.click(fn=shadowchats_button_click)
-
-                shadowchats_checkbox_view = gr.Checkbox(label="Speak Typed Chats / Shadow Chats")
+            shadowchats_checkbox_view = gr.Checkbox(label="Speak Typed Chats / Shadow Chats", value=utils.settings.speak_shadowchats)
 
 
         #

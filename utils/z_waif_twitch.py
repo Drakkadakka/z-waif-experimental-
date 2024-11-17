@@ -11,7 +11,7 @@ class Bot(commands.Bot):
     def __init__(self):
         # Get credentials
         token = os.environ.get('TWITCH_TOKEN')
-        channel = os.environ.get('TWITCH_CHANNEL', 'Namegoes here')
+        channel = os.environ.get('TWITCH_CHANNEL', 'youtubbi')
         client_id = os.environ.get('TWITCH_CLIENT_ID')
         
         if not token.startswith('oauth:'):
