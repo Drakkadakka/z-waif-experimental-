@@ -1,6 +1,74 @@
-Changelog
+## Changelog
 
----.---.---.---
+### V1.7
+- Complex Context-Aware Emotional Responses
+  - Enhanced the emotional response generation to consider user context and previous messages.
+  - Improved sentiment analysis for more nuanced interactions.
+
+- Plugin SDK Enhancements
+  - Added support for complex plugins that can utilize the new emotional response features.
+  - Improved documentation for plugin development.
+
+- Memory Management Improvements
+  - Further optimized memory cleanup processes.
+  - Enhanced memory persistence options for loaded plugins.
+
+- User Interface Updates
+  - Improved UI feedback for emotional responses and plugin actions.
+  - Enhanced visual representation of loaded plugins and their statuses.
+
+### V1.6
+- Plugin SDK Integration
+  - Introduced support for community-made modules via a Plugin SDK.
+  - Dynamic loading of plugins from specified directories.
+  - Enhanced error handling during plugin loading and execution.
+  - Added methods for listing, enabling, and disabling plugins.
+  - Improved resource management for loaded plugins.
+
+- Enhanced Memory Management
+  - Implemented a more robust memory cleanup process.
+  - Added configuration options for memory persistence and cleanup frequency.
+
+- Improved Error Handling
+  - Enhanced error handling across various modules, including Discord and Twitch integrations.
+  - Added detailed logging for plugin execution errors.
+
+- User Interface Improvements
+  - Updated UI to better display loaded plugins and their statuses.
+  - Enhanced visual feedback for plugin actions and errors.
+
+### V1.5
+- Enhanced Discord Integration
+  - Added comprehensive voice channel support:
+    - Text-to-speech (TTS) command for voice output.
+    - Audio playback from URLs.
+    - Voice recording and transcription.
+    - Improved voice channel management.
+  - New Discord Commands:
+    - /tts - Convert text to speech in voice channels.
+    - /play - Play audio from URLs.
+    - /stop - Stop current audio playback.
+    - /help - Detailed command list.
+  - Enhanced error handling for voice features.
+  - Improved voice connection stability.
+  - Better resource management for audio streams.
+  - Prevented downloading of entire playlists when a single video URL is provided.
+  - Note: This version broke talking output in Discord.
+
+### V1.4
+- Fixed critical model initialization bug:
+  - Resolved issues with the model not being properly defined in chat handler.
+  - Improved error handling for model generation.
+  - Added proper cleanup of resources.
+
+### V1.3
+- Added advanced Twitch integration:
+  - Full Twitch chat interaction support.
+  - Per-user memory system that maintains a year of interaction history.
+  - Personalized responses based on user chat history.
+  - Automatic memory cleanup for interactions older than 365 days.
+  - Memory persistence between bot restarts.
+  - Enhanced AI parameters for natural chat interaction.
 
 V1.2
 
