@@ -219,6 +219,10 @@ class Oogabooga_Api_Support:
         client = Client()
 
         @client.event
+        async def on_ready():
+            print(f'Logged in as {client.user}')  # Log when the bot is ready
+
+        @client.event
         async def on_message(message):
             if message.attachments:
                 for attachment in message.attachments:
@@ -232,6 +236,9 @@ class Oogabooga_Api_Support:
         # Start the Discord client using the token from the environment variable
         discord_token = os.getenv('DISCORD_TOKEN')  # Get the token from the environment
         if discord_token:
-            client.run(discord_token)  # Use the token from the .env file
+            try:
+                client.run(discord_token)  # Use the token from the .env file
+            except Exception as e:
+                print(f"Failed to connect to Discord: {e}")  # Log any connection errors
         else:
             print("Discord token not found. Please set the DISCORD_TOKEN in your .env file.")
