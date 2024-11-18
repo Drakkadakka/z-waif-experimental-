@@ -1,0 +1,218 @@
+# Project Documentation
+
+## Overview
+
+This project is an interactive AI system that utilizes advanced memory management, emotion recognition, and adaptive learning to provide personalized user interactions. The system is designed to handle various functionalities, including chat history management, dynamic personality shaping, and voice tone mapping.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+  - [Learn Message](#learn-message)
+  - [Generate Response](#generate-response)
+  - [Add Personality Template](#add-personality-template)
+  - [Get Personality Template](#get-personality-template)
+  - [User Profile](#user-profile)
+  - [Feedback](#feedback)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+To set up the project, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/YourUsername/YourRepository.git
+   cd YourRepository
+   ```
+
+2. **Create a virtual environment**:
+   ```bash
+   python -m venv venv
+   ```
+
+3. **Activate the virtual environment**:
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Run the application**:
+   ```bash
+   python main.py
+   ```
+
+## Usage
+
+Once the application is running, you can interact with it through the provided API endpoints.
+
+## API Endpoints
+
+### Learn Message
+
+- **Endpoint**: `/learn`
+- **Method**: `POST`
+- **Description**: Learn a new message and store its associated sentiment and emotion.
+- **Request Body**:
+  ```json
+  {
+      "message": "Hello, how are you?",
+      "sentiment": 0.5,
+      "emotion": "happy",
+      "user_id": "user123",
+      "context": "greeting"
+  }
+  ```
+
+### Generate Response
+
+- **Endpoint**: `/generate_response`
+- **Method**: `POST`
+- **Description**: Generate a personalized response based on the user profile and message context.
+- **Request Body**:
+  ```json
+  {
+      "user_id": "user123",
+      "message": "What can you do?"
+  }
+  ```
+
+### Add Personality Template
+
+- **Endpoint**: `/add_template`
+- **Method**: `POST`
+- **Description**: Add a new personality template for the AI.
+- **Request Body**:
+  ```json
+  {
+      "name": "Friendly",
+      "template": "Hello! How can I assist you today?"
+  }
+  ```
+
+### Get Personality Template
+
+- **Endpoint**: `/get_template/<name>`
+- **Method**: `GET`
+- **Description**: Retrieve a personality template by name.
+- **Response**:
+  ```json
+  {
+      "template": "Hello! How can I assist you today?"
+  }
+  ```
+
+### User Profile
+
+- **Endpoint**: `/user_profile/<user_id>`
+- **Method**: `GET`
+- **Description**: Retrieve the user profile by user ID.
+- **Response**:
+  ```json
+  {
+      "profile": {
+          "personality": "Friendly",
+          "preferences": {}
+      }
+  }
+  ```
+
+### Feedback
+
+- **Endpoint**: `/feedback`
+- **Method**: `POST`
+- **Description**: Provide feedback to adjust the user's personality.
+- **Request Body**:
+  ```json
+  {
+      "user_id": "user123",
+      "feedback": "positive"
+  }
+  ```
+
+## Examples
+
+### Learning a Message
+
+To learn a message, send a POST request to `/learn` with the message data.
+
+### Generating a Response
+
+To generate a response, send a POST request to `/generate_response` with the user ID and message.
+
+### Adding a Personality Template
+
+To add a personality template, send a POST request to `/add_template` with the template data.
+
+## Manual Commands
+
+### Running the Application
+
+1. **Start the Application**:
+   After setting up the environment and installing dependencies, run the application using:
+   ```bash
+   python main.py
+   ```
+
+2. **Interact with the API**:
+   You can use tools like `curl`, Postman, or any HTTP client to interact with the API endpoints. Here are some example commands using `curl`:
+
+   - **Learn a Message**:
+     ```bash
+     curl -X POST http://localhost:5000/learn -H "Content-Type: application/json" -d '{
+         "message": "Hello, how are you?",
+         "sentiment": 0.5,
+         "emotion": "happy",
+         "user_id": "user123",
+         "context": "greeting"
+     }'
+     ```
+
+   - **Generate a Response**:
+     ```bash
+     curl -X POST http://localhost:5000/generate_response -H "Content-Type: application/json" -d '{
+         "user_id": "user123",
+         "message": "What can you do?"
+     }'
+     ```
+
+   - **Add a Personality Template**:
+     ```bash
+     curl -X POST http://localhost:5000/add_template -H "Content-Type: application/json" -d '{
+         "name": "Friendly",
+         "template": "Hello! How can I assist you today?"
+     }'
+     ```
+
+   - **Get User Profile**:
+     ```bash
+     curl -X GET http://localhost:5000/user_profile/user123
+     ```
+
+   - **Provide Feedback**:
+     ```bash
+     curl -X POST http://localhost:5000/feedback -H "Content-Type: application/json" -d '{
+         "user_id": "user123",
+         "feedback": "positive"
+     }'
+     ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.

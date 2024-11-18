@@ -24,12 +24,18 @@ sentence-transformers>=2.2.0
 torch
 torchvision
 torchaudio
-sentence-transformers
 scipy
 gtts>=2.3.1
 PyNaCl>=1.5.0
 yt-dlp>=2023.12.30
-websockets>=11.0.3
+librosa  # For audio analysis
+transformers  # For emotion recognition and NLP tasks
+Flask==2.2.3  # For creating the API
+Flask-Cors  # For handling CORS
+mediapipe  # For face and hand tracking
+APScheduler  # For scheduling tasks
+Pillow  # For image processing
+textblob  # For context-aware emotional responses
 
 # Optional but recommended for better audio processing
 # Note: FFmpeg should be installed separately through your system's package manager
@@ -37,8 +43,8 @@ websockets>=11.0.3
 # Linux: apt-get install ffmpeg
 # macOS: brew install ffmpeg
 
-# Additional requirements for GIF processing
-Pillow  # For image processing
-
-# Added requirement for sentiment analysis
-textblob  # For context-aware emotional responses
+# Optional development tools
+pytest  # For testing
+black  # For code formatting
+mypy  # For type checking
+jupyter  # For Jupyter notebooks

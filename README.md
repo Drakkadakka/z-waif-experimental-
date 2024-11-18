@@ -1,5 +1,5 @@
 # z-waif
-Fully local &amp; open source AI Waifu. VTube Studio, Discord, Minecraft, custom made RAG (long term memory), alarm, and plenty more! Has a WebUI and hotkey shortcuts. All software is free (or extremely cheap)!
+Fully local & open source AI Waifu. VTube Studio, Discord, Minecraft, custom made RAG (long term memory), alarm, and plenty more! Has a WebUI and hotkey shortcuts. All software is free (or extremely cheap)!
 
 Requires Windows 10/11 and a CUDA (NVidia) GPU with at least 12GB+ of video memory. 16GB is recommended.
 Uses Oobabooga, RVC, and Whisper to run all AI systems locally. Works as a front end to tie many programs together into one cohesive whole.
@@ -14,50 +14,50 @@ The goal of the project is less about giving an "all in one package", and moreso
 
 - 🎙️ Quality Conversation &nbsp; &emsp; &emsp; ( /・0・)
 
-	- Speak back and forth, using Whisper text to speech.
- 	- Configure your own waifu's voice with thousands of possible models.
-  	- Imperial-tons of quality of life tweaks.
+    - Speak back and forth, using Whisper text to speech.
+    - Configure your own waifu's voice with thousands of possible models.
+    - Imperial-tons of quality of life tweaks.
     - Enhanced model stability and resource management.
-    - **Context-aware emotional responses** for more nuanced interactions.
-    - **Emotional memory tracking system** to remember user sentiments.
+    - Context-aware emotional responses for more nuanced interactions.
+    - Emotional memory tracking system to remember user sentiments.
 
 - 🍄 Vtuber Integration &nbsp; &nbsp; &emsp; &emsp; ღゝ◡╹ )ノ♡
-	- Uses VTube Studio, and any compatible models!
- 	- Ability to send emotes to the model, based on their actions.
-	- Idle / Speaking animation.
+    - Uses VTube Studio, and any compatible models!
+    - Ability to send emotes to the model, based on their actions.
+    - Idle / Speaking animation.
     - Twitch chat integration for live interaction!
     - Stream overlay support with customizable themes.
-    - **Collaborative streaming with multiple AI models** for enhanced interaction.
-    - **Real-time background scene switching** and **custom animation trigger system**.
+    - Collaborative streaming with multiple AI models for enhanced interaction.
+    - Real-time background scene switching and custom animation trigger system.
 
 - 💾 Enhanced Memory &nbsp; &nbsp; &nbsp; &emsp; &emsp; (ー_ーゞ
-	- Add Lorebook entries, for your waifu to remember a wide array of info as needed.
- 	- Enable the custom RAG, giving them knowledge of older conversations.
+    - Add Lorebook entries, for your waifu to remember a wide array of info as needed.
+    - Enable the custom RAG, giving them knowledge of older conversations.
     - Import old logs and conversations, keeping your same AI waifu from another software!
     - Improved resource cleanup and memory management.
-    - **Memory categorization and priority system** for better organization.
-    - **Custom memory pruning rules** to manage memory effectively.
+    - Memory categorization and priority system for better organization.
+    - Custom memory pruning rules to manage memory effectively.
 
 - 🎮 Modularity &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp; ⌌⌈ ╹므╹⌉⌏
-	- Enable various built-in modules;
- 		- Discord, for messaging.
-		- Vision, to enable multimodal, and allow them to see!
-   	 	- Alarm, so your waifu can wake you up in the morning.
-     	- Minecraft, allowing your waifu to control the game using Baritone, Wurst, and other command-based mods.
+    - Enable various built-in modules;
+        - Discord, for messaging.
+        - Vision, to enable multimodal, and allow them to see!
+        - Alarm, so your waifu can wake you up in the morning.
+        - Minecraft, allowing your waifu to control the game using Baritone, Wurst, and other command-based mods.
         - Twitch, for live streaming interaction and chat moderation.
-	- All the options and modularity from any external software used. Oobabogoa, RVC Voice, etc.
+    - All the options and modularity from any external software used. Oobabogoa, RVC Voice, etc.
     - Enhanced error handling and module initialization.
-    - **Smart Home Integration module** for controlling devices like Phillips Hue and Spotify.
+    - Smart Home Integration module for controlling devices like Phillips Hue and Spotify.
 
 - 📊 Analytics & Export
-	- **Conversation analytics and insights** for better understanding interactions.
-	- **Export tools for content creation** and performance metrics tracking.
-	- **Usage statistics dashboard** for monitoring engagement.
+    - Conversation analytics and insights for better understanding interactions.
+    - Export tools for content creation and performance metrics tracking.
+    - Usage statistics dashboard for monitoring engagement.
 
 - 🧪 Experimental Features
-	- **Multi-model conversation mixing** for diverse interactions.
-	- **Dynamic personality evolution** based on user interactions.
-	- **Real-time voice style transfer** for varied vocal expressions.
+    - Multi-model conversation mixing for diverse interactions.
+    - Dynamic personality evolution based on user interactions.
+    - Real-time voice style transfer for varied vocal expressions.
 
 ## YouTube Showcase
 
@@ -142,6 +142,79 @@ To set up and use the Plugin SDK, follow these steps:
 
 ## Changelog
 
+### V1.9
+- Streamlined the codebase, removing unused and outdated sections of features
+
+- Contextual Memory Implementation
+  - Enhanced memory management to store and retrieve messages based on context.
+  - Improved emotional memory tracking to remember user sentiments over time.
+
+- Emotion Recognition Integration
+  - Added advanced emotion recognition from text and audio inputs.
+  - Implemented a method to analyze and recognize emotions for personalized interactions.
+  - Integrated Whisper for audio transcription and emotion analysis.
+  - Enhanced sentiment analysis for more nuanced interactions.
+
+- Adaptive Learning Features
+  - Introduced adaptive learning mechanisms to adjust based on user interactions.
+  - Enhanced personalized response generation based on user profiles and past interactions.
+
+- Dynamic Personality Shaping
+  - Implemented dynamic personality adjustments based on user interactions.
+  - Improved user profile management to tailor responses according to individual preferences.
+
+- Dynamic Expression Mapping
+  - Added dynamic expression mapping to associate user emotions with corresponding visual expressions.
+  - Enhanced user interactions by appending expressions to responses based on detected emotions.
+
+- Character Relationship Tracking
+  - Implemented a system to track relationships between characters based on interactions.
+  - Added methods to update and retrieve relationship data, including relationship scores and last interactions.
+  - Enhanced character interactions by considering relationship dynamics in responses.
+
+- Memory Cleanup
+  - Implemented automatic cleanup of memories older than 365 days.
+  - Enhanced memory management to ensure efficient storage and retrieval of user interactions.
+
+- API Support Skeleton
+  - Added a basic Flask API structure for interaction with the ChatLearner.
+  - Implemented endpoints for learning messages, generating responses, and managing user profiles.
+
+- Custom Personality Templates
+  - Implemented a system to create and manage custom personality templates.
+  - Added methods to add, retrieve, and use personality templates in interactions.
+
+- Complex Context-Aware Emotional Responses
+  - Enhanced the emotional response generation to consider user context and previous messages.
+  - Improved sentiment analysis for more nuanced interactions.
+
+- Voice Tone Mapping
+  - Implemented voice tone matching to enhance emotional responses based on audio analysis.
+
+- Enhanced User Experience
+  - Improved UI feedback for emotional responses and plugin actions.
+  - Enhanced visual representation of emotional states during interactions.
+
+- Various Bug Fixes and Performance Improvements
+  - Fixed various bugs related to memory management and emotional response generation.
+  - Optimized performance for real-time emotion recognition and processing.
+
+### V1.8
+- Cross-Session Learning Implementation
+  - Added functionality to learn from messages across different sessions.
+  - Introduced a method to retrieve learned messages and sentiments from the database.
+
+- Custom Personality Templates
+  - Implemented a system to create and manage custom personality templates.
+  - Added methods to add, retrieve, and use personality templates in interactions.
+
+- Complex Context-Aware Emotional Responses
+  - Enhanced the emotional response generation to consider user context and previous messages.
+  - Improved sentiment analysis for more nuanced interactions.
+
+- Voice Tone Mapping
+  - Implemented voice tone matching to enhance emotional responses based on audio analysis.
+
 ### V1.7
 - Complex Context-Aware Emotional Responses
   - Enhanced the emotional response generation to consider user context and previous messages.
@@ -195,7 +268,6 @@ To set up and use the Plugin SDK, follow these steps:
   - Improved voice connection stability.
   - Better resource management for audio streams.
   - Prevented downloading of entire playlists when a single video URL is provided.
-  - Note: This version broke talking output in Discord.
 
 ### V1.4
 - Fixed critical model initialization bug:
@@ -280,28 +352,20 @@ V1.0
 
 ## Current To-Do
 
-### 🎯 High Priority
+### High Priority
 - [ ] Multi-language support with automatic translation
 - [ ] Motion capture support for dynamic reactions
 - [ ] Smart Home Integration module
   - [ ] Phillips Hue integration
   - [ ] Spotify/Music control
   - [ ] Temperature control
-- [ ] Plugin SDK for community-made modules
   - [ ] Documentation for plugin development
   - [ ] Example plugins for community reference
 - [ ] Fix talking output in Discord
 
-### 🧠 AI Enhancements
-- [ ] Context-aware emotional responses
-  - [ ] Voice tone matching
-  - [ ] Dynamic expression mapping
-- [ ] Emotional memory tracking system
-- [ ] Cross-session learning implementation
-- [ ] Custom personality templates
-- [ ] Character relationship tracking
+### AI Enhancements
 
-### 🎬 VTuber Features
+### VTuber Features
 - [ ] Collaborative streaming with multiple AI models
 - [ ] Real-time background scene switching
 - [ ] Custom animation trigger system
@@ -310,7 +374,7 @@ V1.0
 - [ ] Scene composition tools
 - [ ] Dynamic background environments
 
-### 🛠️ Technical Improvements
+### Technical Improvements
 - [ ] Memory categorization and priority system
 - [ ] Custom memory pruning rules
 - [ ] Performance optimization tools
@@ -318,7 +382,7 @@ V1.0
 - [ ] Cross-module interaction system
 - [ ] Batch conversation processing
 
-### 📱 New Modules
+### New Modules
 - [ ] Calendar Sync
   - [ ] Google Calendar integration
   - [ ] Outlook support
@@ -330,7 +394,7 @@ V1.0
   - [ ] Mood-based playlists
   - [ ] Voice commands
 
-### 💅 UI/UX Improvements
+### UI/UX Improvements
 - [ ] Custom UI themes and layouts
 - [ ] Voice pack management system
 - [ ] Character appearance presets
@@ -338,15 +402,14 @@ V1.0
 - [ ] Conversation analytics dashboard
 - [ ] Advanced prompt engineering interface
 
-### 📊 Analytics & Export
+### Analytics & Export
 - [ ] Conversation analytics and insights
 - [ ] Export tools for content creation
 - [ ] Performance metrics tracking
 - [ ] Usage statistics dashboard
 
-### 🧪 Experimental Features
+### Experimental Features
 - [ ] Multi-model conversation mixing
 - [ ] Advanced context switching
 - [ ] Dynamic personality evolution
 - [ ] Real-time voice style transfer
-

@@ -1,22 +1,31 @@
+import logging
 
-debug_log = "General Debug log will go here!\n\nAnd here!"
-rag_log = "RAG log will go here!"
-kelvin_log = "Live temperature randomness will go here!"
+# Create a logger
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
+# Define log variables
+debug_log = ""
+rag_log = ""
+kelvin_log = ""
 
-def update_debug_log(text):
+def log_debug(message):
     global debug_log
-    debug_log += "\n\n" + str(text)
+    debug_log += f"{message}\n"
+    logger.debug(message)
 
+def log_info(message):
+    logger.info(message)
 
-def update_rag_log(text):
+def log_error(message):
+    logger.error(message)
+
+def update_rag_log(message):
     global rag_log
-    rag_log += "\n\n" + str(text)
+    rag_log += f"{message}\n"
+    logger.info(message)
 
 def clear_rag_log():
     global rag_log
-    rag_log = ""
-
-def update_kelvin_log(text):
-    global kelvin_log
-    kelvin_log = text
+    rag_log = ""  # Clear the rag_log
+    logger.info("RAG log cleared.")

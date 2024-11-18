@@ -1,7 +1,7 @@
 from multiprocessing import Pool, cpu_count
 import numpy as np
 from datetime import datetime
-import json
+import logging
 
 class MultiprocessRAG:
     def __init__(self, embedding_model, chunk_size=1000, max_workers=None):
@@ -19,6 +19,7 @@ class MultiprocessRAG:
                 'timestamp': datetime.now().isoformat()
             }
         except Exception as e:
+            logging.error(f"Error processing chunk: {e}")
             return None
             
     def process_documents(self, documents):

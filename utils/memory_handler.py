@@ -23,8 +23,8 @@ class MemoryHandler:
         current_time = datetime.now()
         one_year_ago = current_time - timedelta(days=365)
         
-        for user_id in self.memories:
-            # Convert stored timestamps to datetime objects and filter
+        for user_id in list(self.memories.keys()):
+            # Filter interactions older than one year
             self.memories[user_id]["interactions"] = [
                 interaction for interaction in self.memories[user_id]["interactions"]
                 if datetime.fromisoformat(interaction["timestamp"]) > one_year_ago
@@ -55,23 +55,12 @@ class MemoryHandler:
         self.memories[user_id]["interactions"].append({
             "timestamp": current_time.isoformat(),
             "content": interaction_data["content"],
-            "context": interaction_data.get("context", "")
+            "context": interaction_data.get("context", ""),
+            "emotion": interaction_data.get("emotion", "")
         })
         
         # Clean old memories for this user
-        one_year_ago = current_time - timedelta(days=365)
-        self.memories[user_id]["interactions"] = [
-            interaction for interaction in self.memories[user_id]["interactions"]
-            if datetime.fromisoformat(interaction["timestamp"]) > one_year_ago
-        ]
-        
-        # Update conversation history
-        self.memories[user_id]["conversation_history"] = [
-            f"User: {interaction['content']}" 
-            for interaction in self.memories[user_id]["interactions"][-50:]  # Keep last 50 for context
-        ]
-        
-        self.save_memories()
+        self._clean_old_memories()
         
     def get_user_context(self, user_id):
         if user_id not in self.memories:

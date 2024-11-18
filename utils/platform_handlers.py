@@ -1,6 +1,7 @@
 from minecraft_handler import MinecraftHandler
 from discord_handler import DiscordHandler
 from twitch_handler import TwitchHandler
+import logging
 
 class PlatformManager:
     def __init__(self):
@@ -14,4 +15,6 @@ class PlatformManager:
         """Route messages to appropriate platform handlers"""
         platform = message_data.get("platform")
         if platform in self.handlers:
-            return await self.handlers[platform].process(message_data) 
+            return await self.handlers[platform].process(message_data)
+        else:
+            logging.error(f"Platform handler for {platform} not found.") 

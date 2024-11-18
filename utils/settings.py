@@ -22,6 +22,12 @@ discord_enabled = True
 rag_enabled = True
 vision_enabled = True
 
+# Feature Toggles
+autochat_enabled = True  # Toggle for auto-chat feature
+voice_enabled = True       # Toggle for voice feature
+memory_enabled = True      # Toggle for memory feature
+debug_mode = True        # Toggle for debug mode
+
 # Twitch Settings
 TWITCH_ENABLED = True
 TWITCH_DEBUG_LOGGING = True

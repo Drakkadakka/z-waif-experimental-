@@ -9,6 +9,9 @@ import discord
 from discord import FFmpegPCMAudio
 import yt_dlp
 import utils.api as API  # Adjust the import based on your project structure
+import librosa
+import numpy as np
+from scipy.io import wavfile
 
 
 class DiscordVoiceHandler:
@@ -179,3 +182,54 @@ class DiscordVoiceHandler:
             await self.text_to_speech(reply_message, self.voice_clients[channel.guild.id])
         else:
             print("No new messages from Oogabooga.")
+
+    async def analyze_voice_tone(self, audio_file):
+        """Analyzes the tone of voice from an audio file."""
+        # Load the audio file
+        sample_rate, audio_data = wavfile.read(audio_file)
+        # Use librosa to analyze the audio
+        audio_data = librosa.load(audio_file, sr=sample_rate)[0]
+        # Analyze the tone (e.g., pitch, loudness)
+        pitch, _ = librosa.piptrack(y=audio_data, sr=sample_rate)
+        avg_pitch = np.mean(pitch)
+        # Determine emotion based on pitch
+        if avg_pitch > 300:  # Example threshold for happy tone
+            return 'happy'
+        elif avg_pitch < 150:  # Example threshold for sad tone
+            return 'sad'
+        else:
+            return 'neutral'
+
+    def set_emote_string(self, emote):
+        """Set the emote string for the current emotion."""
+        # Implementation for setting the emote string
+        print(f"Emote set to: {emote}")  # Example implementation
+
+    async def handle_motion_capture_data(self, data):
+        """Handles motion capture data to trigger dynamic reactions."""
+        # Process the motion capture data
+        if data['emotion'] == 'happy':
+            self.set_emote_string("*happy*")
+        elif data['emotion'] == 'sad':
+            self.set_emote_string("*sad*")
+        elif data['emotion'] == 'angry':
+            self.set_emote_string("*angry*")
+        elif data['emotion'] == 'surprised':
+            self.set_emote_string("*surprised*")
+        elif data['emotion'] == 'confident':
+            self.set_emote_string("*confident*")
+        elif data['emotion'] == 'defeated':
+            self.set_emote_string("*defeated*")
+        elif data['emotion'] == 'excited':
+            self.set_emote_string("*excited*")
+        elif data['emotion'] == 'neutral':
+            self.set_emote_string("*neutral*")
+        
+        # New: Analyze voice tone and adjust emote accordingly
+        audio_file = 'path/to/your/audio/file.wav'  # Replace with actual audio file path
+        tone = await self.analyze_voice_tone(audio_file)
+        if tone == 'happy':
+            self.set_emote_string("*happy*")
+        elif tone == 'sad':
+            self.set_emote_string("*sad*")
+        # Add more conditions as needed

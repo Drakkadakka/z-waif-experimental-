@@ -1,12 +1,17 @@
 from chat.learner import ChatLearner
 from memory.manager import MemoryManager
 from datetime import datetime
+from utils.contextual_memory import ContextualMemory
+from utils.character_relationships import CharacterRelationshipManager
+from utils.chat_history import update_chat_history
 
 class EnhancedMemorySystem:
     def __init__(self):
         self.memory_manager = MemoryManager()
         self.chat_learner = ChatLearner()
-        
+        self.contextual_memory = ContextualMemory()
+        self.relationship_manager = CharacterRelationshipManager()  # Initialize relationship manager
+
     async def process_interaction(self, message_data, platform):
         """Process and store interaction data with enhanced context"""
         # Learn from message
@@ -27,4 +32,18 @@ class EnhancedMemorySystem:
             platform
         )
         
-        return context 
+        # Update contextual memory
+        self.contextual_memory.update_context(message_data["author"], context)
+
+        # Update chat history
+        await update_chat_history(message_data["author"], platform, message_data["content"], "AI response here")  # Replace with actual AI response
+
+        # Update relationships based on interaction
+        self.relationship_manager.update_relationship(message_data["author"], message_data["recipient"], message_data["interaction_type"])
+
+        return context
+
+    def prune_old_context(self):
+        """Automatically prune old context data."""
+        self.contextual_memory.prune_old_context()
+        self.relationship_manager.prune_old_relationships()  # Prune old relationships

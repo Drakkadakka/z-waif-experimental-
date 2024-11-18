@@ -44,6 +44,8 @@ from utils.user_context import get_user_context, update_user_context
 from utils.chat_history import get_chat_history, update_chat_history
 from utils.message_processing import clean_response
 
+from utils.logging import log_info, log_error
+
 async def main_twitch_chat(message_data):
     """
     Handle Twitch chat messages with personalized AI responses
@@ -701,5 +703,4 @@ if __name__ == "__main__":
 
 
     run_program()
-
 
