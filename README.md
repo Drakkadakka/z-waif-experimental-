@@ -141,6 +141,43 @@ To set up and use the Plugin SDK, follow these steps:
    ```
 
 ## Changelog
+### V2.0
+- Dynamic Expression Mapping
+  - Expanded the `DynamicExpressionMapper` to include a wider range of expressions for more nuanced emotional representation.
+  - Integrated dynamic expression mapping with VTube Studio to reflect emotions in real-time.
+
+- VTube Studio Enhancements
+  - Added support for setting expressions in VTube Studio based on detected emotions.
+  - Improved integration with VTube Studio for real-time emotion-based expression changes.
+
+- General Improvements
+  - Enhanced modularity and error handling across various modules.
+  - Improved memory management and resource cleanup processes.
+  - Added new experimental features for multi-model conversation mixing and dynamic personality evolution.
+
+- Custom Personality Templates
+  - Implemented a system to create and manage custom personality templates.
+  - Added methods to add, retrieve, and use personality templates in interactions.
+
+- Complex Context-Aware Emotional Responses
+  - Enhanced the emotional response generation to consider user context and previous messages.
+  - Improved sentiment analysis for more nuanced interactions.
+
+- Voice Tone Mapping
+  - Implemented voice tone matching to enhance emotional responses based on audio analysis.
+
+- Enhanced User Experience
+  - Improved UI feedback for emotional responses and plugin actions.
+  - Enhanced visual representation of emotional states during interactions.
+
+- New Features
+  - Introduced a feedback mechanism for users to provide input on AI responses, allowing for continuous improvement of the system.
+  - Added support for additional platforms, enhancing the versatility of the AI assistant.
+  - Implemented logging features for better tracking of interactions and system performance.
+
+- Bug Fixes and Performance Improvements
+  - Fixed various bugs related to memory management and emotional response generation.
+  - Optimized performance for real-time emotion recognition and processing.
 
 ### V1.9
 - Streamlined the codebase, removing unused and outdated sections of features
