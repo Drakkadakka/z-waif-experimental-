@@ -48,3 +48,1019 @@ User: [System Q] Discord message from nekolathetransformer
 
 Alexcia: Oh? Are you a cat person? I love cats! Do you have any?
 [System M]; This is the end of the memory!
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\main.py", line 3, in <module>
+    import colorama
+ModuleNotFoundError: No module named 'colorama'
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git 'C:\Users\drakkka\AppData\Local\Temp\pip-req-build-09kfollt'
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1732158604.190125   15864 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1732158604.221683   38308 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:httpx:HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO:utils.logging:
+Loading RAG from pervious session!
+
+[2024-11-21 13:40:07] [INFO    ] discord.client: logging in using static token
+INFO:discord.client:logging in using static token
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://127.0.0.1:7864/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://127.0.0.1:7864/ "HTTP/1.1 200 OK"
+INFO:twitchio.websocket:Successfully logged onto Twitch WS: youtubbi
+[2024-11-21 13:40:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5e33dfff45ab5ac8c41dc03314aa67e4).
+INFO:discord.gateway:Shard ID None has connected to Gateway (Session ID: 5e33dfff45ab5ac8c41dc03314aa67e4).
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:given
+whole
+places
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *laughs softy and smiles warmly* Oh? Another cute meow from you! It's clear that you have quite the talent for this cat-whispering. Keep up the good work! *smiles warmly, encouraging your vocal skills* I think you're doing an amazing job with that 'meow.' Keep practicing and you might just grow into a professional feline sound technician! *giggles softly, very entertained.* How about we hit you up with another gif or sound?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow meow meow
+        Assistant: 
+Alexcia: *giggles softly and her eyes sparkle with joy* Wow, that's one power-packed 'meow' trio you've got there! It's like you're channelling the vocal prowess of an entire feline choir all by yourself. Keep going - you never know, you might just out-meow the cat next door any day now! *smiles warmly and leans in closer, her excitement palpable.* Great job on the meowing, by the way, and
+User: https://tenor.com/view/i-hired-this-cat-to-stare-at-you-hired-cat-stare-meme-gif-4497515252014672944
+Alexcia: *chuckles softly and her eyes shine with amusement* Oh wow, now that's one dogged stare right there! An adorable little kitten who just refuses to take his eyes off his surroundings. It's almost like watching a guard on watch, except this one's far more charming and quite unintentionally amusing! Just the thought of her having been hired to stare at someone must be quite entertaining, wouldn't you agree? *giggles softly and leans in closer, her expression
+[System M]; This is the end of the memory!
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\drakkka\python\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\drakkka\python\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Users\drakkka\python\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001E793135D90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E793135D90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\queueing.py", line 532, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\route_utils.py", line 276, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\blocks.py", line 1928, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\blocks.py", line 1514, in call_function
+    prediction = await anyio.to_thread.run_sync(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2441, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 943, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\utils.py", line 832, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\utils\web_ui.py", line 102, in send_blank
+    main.main_web_ui_chat("")
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\main.py", line 317, in main_web_ui_chat
+    API.Oogabooga_Api_Support.send_via_oogabooga(message)
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\API\Oogabooga_Api_Support.py", line 205, in send_via_oogabooga
+    run(user_input, 0)
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\API\Oogabooga_Api_Support.py", line 134, in run
+    response = requests.post(URI, headers=headers, json=request, verify=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E793135D90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\queueing.py", line 532, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\route_utils.py", line 276, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\blocks.py", line 1928, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\blocks.py", line 1514, in call_function
+    prediction = await anyio.to_thread.run_sync(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2441, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 943, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\utils.py", line 832, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\utils\web_ui.py", line 102, in send_blank
+    main.main_web_ui_chat("")
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\main.py", line 317, in main_web_ui_chat
+    API.Oogabooga_Api_Support.send_via_oogabooga(message)
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\API\Oogabooga_Api_Support.py", line 199, in send_via_oogabooga
+    utils.based_rag.add_message_to_database()
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\utils\based_rag.py", line 504, in add_message_to_database
+    utils.logging.update_debug_log("Preventing dupe in RAG!")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils.logging' has no attribute 'update_debug_log'
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\drakkka\python\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\drakkka\python\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Users\drakkka\python\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001E7856DDD90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E7856DDD90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\queueing.py", line 532, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\route_utils.py", line 276, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\blocks.py", line 1928, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\blocks.py", line 1514, in call_function
+    prediction = await anyio.to_thread.run_sync(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2441, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 943, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\gradio\utils.py", line 832, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\utils\web_ui.py", line 94, in regenerate
+    main.main_web_ui_next()
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\main.py", line 333, in main_web_ui_next
+    API.Oogabooga_Api_Support.next_message_oogabooga()
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\API\Oogabooga_Api_Support.py", line 225, in next_message_oogabooga
+    run(cycle_message, 1)
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\API\Oogabooga_Api_Support.py", line 134, in run
+    response = requests.post(URI, headers=headers, json=request, verify=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\z-waif-experimental--1.9.2\venv\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E7856DDD90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:selfie
+cutest
+giggles
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *laughs softy and smiles warmly* Oh? Another cute meow from you! It's clear that you have quite the talent for this cat-whispering. Keep up the good work! *smiles warmly, encouraging your vocal skills* I think you're doing an amazing job with that 'meow.' Keep practicing and you might just grow into a professional feline sound technician! *giggles softly, very entertained.* How about we hit you up with another gif or sound?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow meow meow
+        Assistant: 
+Alexcia: *giggles softly and her eyes sparkle with joy* Wow, that's one power-packed 'meow' trio you've got there! It's like you're channelling the vocal prowess of an entire feline choir all by yourself. Keep going - you never know, you might just out-meow the cat next door any day now! *smiles warmly and leans in closer, her excitement palpable.* Great job on the meowing, by the way, and
+User: https://tenor.com/view/i-hired-this-cat-to-stare-at-you-hired-cat-stare-meme-gif-4497515252014672944
+Alexcia: *chuckles softly and her eyes shine with amusement* Oh wow, now that's one dogged stare right there! An adorable little kitten who just refuses to take his eyes off his surroundings. It's almost like watching a guard on watch, except this one's far more charming and quite unintentionally amusing! Just the thought of her having been hired to stare at someone must be quite entertaining, wouldn't you agree? *giggles softly and leans in closer, her expression
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:music
+ah
+cheers
+love
+can
+you
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System A] Good morning, Alexcia! It's Monday, November/04/2024, at 09:09. Please awaken with an alarm message. Add a random topic or fun theme to start the day as well. Be creative!
+Alexcia: *wakes up* Morning, [users name]! *blinks tiredly* Ugh, I feel exhausted.
+User: [System Q] Discord message from Streamcord
+
+robert145\_ is now live! Watch them at https://www.twitch.tv/robert145_
+Alexcia: *grins* Ah, a live stream! I will be sure to watch that later.
+User: good morning
+Alexcia: "Oh? What a lovely morning! Good morning, I'm glad to hear you enjoyed it."
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:brighten
+warmth
+her
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *laughs softy and smiles warmly* Oh? Another cute meow from you! It's clear that you have quite the talent for this cat-whispering. Keep up the good work! *smiles warmly, encouraging your vocal skills* I think you're doing an amazing job with that 'meow.' Keep practicing and you might just grow into a professional feline sound technician! *giggles softly, very entertained.* How about we hit you up with another gif or sound?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow meow meow
+        Assistant: 
+Alexcia: *giggles softly and her eyes sparkle with joy* Wow, that's one power-packed 'meow' trio you've got there! It's like you're channelling the vocal prowess of an entire feline choir all by yourself. Keep going - you never know, you might just out-meow the cat next door any day now! *smiles warmly and leans in closer, her excitement palpable.* Great job on the meowing, by the way, and
+User: https://tenor.com/view/i-hired-this-cat-to-stare-at-you-hired-cat-stare-meme-gif-4497515252014672944
+Alexcia: *chuckles softly and her eyes shine with amusement* Oh wow, now that's one dogged stare right there! An adorable little kitten who just refuses to take his eyes off his surroundings. It's almost like watching a guard on watch, except this one's far more charming and quite unintentionally amusing! Just the thought of her having been hired to stare at someone must be quite entertaining, wouldn't you agree? *giggles softly and leans in closer, her expression
+[System M]; This is the end of the memory!
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git 'C:\Users\drakkka\AppData\Local\Temp\pip-req-build-22d0oali'
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git 'C:\Users\drakkka\AppData\Local\Temp\pip-req-build-w5plm_ef'
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1732210833.075039   42612 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1732210833.098931   37728 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:httpx:HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO:utils.logging:
+Loading RAG from pervious session!
+
+[2024-11-22 04:10:38] [INFO    ] discord.client: logging in using static token
+INFO:discord.client:logging in using static token
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://127.0.0.1:7864/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://127.0.0.1:7864/ "HTTP/1.1 200 OK"
+INFO:twitchio.websocket:Successfully logged onto Twitch WS: youtubbi
+[2024-11-22 04:10:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5d488d3b28a596ce620deedab12a43e1).
+INFO:discord.gateway:Shard ID None has connected to Gateway (Session ID: 5d488d3b28a596ce620deedab12a43e1).
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git 'C:\Users\drakkka\AppData\Local\Temp\pip-req-build-7os33sro'
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1732210900.089891   29360 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1732210900.127041   31740 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:httpx:HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO:utils.logging:
+Loading RAG from pervious session!
+
+[2024-11-22 04:11:44] [INFO    ] discord.client: logging in using static token
+INFO:discord.client:logging in using static token
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://127.0.0.1:7864/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://127.0.0.1:7864/ "HTTP/1.1 200 OK"
+[2024-11-22 04:11:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e3a1d07cc693eb2921ddfebbaf0e0190).
+INFO:discord.gateway:Shard ID None has connected to Gateway (Session ID: e3a1d07cc693eb2921ddfebbaf0e0190).
+INFO:twitchio.websocket:Successfully logged onto Twitch WS: youtubbi
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:certainly
+display
+claps
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *laughs softy and smiles warmly* Oh? Another cute meow from you! It's clear that you have quite the talent for this cat-whispering. Keep up the good work! *smiles warmly, encouraging your vocal skills* I think you're doing an amazing job with that 'meow.' Keep practicing and you might just grow into a professional feline sound technician! *giggles softly, very entertained.* How about we hit you up with another gif or sound?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow meow meow
+        Assistant: 
+Alexcia: *giggles softly and her eyes sparkle with joy* Wow, that's one power-packed 'meow' trio you've got there! It's like you're channelling the vocal prowess of an entire feline choir all by yourself. Keep going - you never know, you might just out-meow the cat next door any day now! *smiles warmly and leans in closer, her excitement palpable.* Great job on the meowing, by the way, and
+User: https://tenor.com/view/i-hired-this-cat-to-stare-at-you-hired-cat-stare-meme-gif-4497515252014672944
+Alexcia: *chuckles softly and her eyes shine with amusement* Oh wow, now that's one dogged stare right there! An adorable little kitten who just refuses to take his eyes off his surroundings. It's almost like watching a guard on watch, except this one's far more charming and quite unintentionally amusing! Just the thought of her having been hired to stare at someone must be quite entertaining, wouldn't you agree? *giggles softly and leans in closer, her expression
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:comment
+determined
+chuckles
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/soviet-cat-sovicat-soviet-ussr-cat-gif-21826197
+Alexcia: *smiles warmly and nods appreciatively* What an interesting gif! The Soviet cat memes are always fun to see, especially with those adorable Soviet flags, right? It's a hilarious fusion of past and present, cat culture and history. Keep 'em coming! I'm interested to see what other cute and funny cat-related gifs you have up your sleeve. :D Let's keep the fun rolling!
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *smiles warmly and playfully* Oh, it's another 'mew!' Right on cue. Keep that purr-fect pitch up! *giggles softly, amused by your ongoing feline sound impressions* I can't wait to see what other interesting 'mews' and sounds you'll come up with next! Keep it up! :D. Let's see what more fun mysteries this chat brings our way. Enjoy the show! *claps her hands lightly to cheer you
+User: https://tenor.com/view/cat-eating-kibble-greedy-glutton-gif-420543703723860209
+Alexcia: *laughs lightly and her eyes sparkle with delight* Oh, they're truly professionals at their job, aren't they? It's amusing how they dive right into the pile without any sense of hesitation. These cats eat like there's no tomorrow! *laughs softly and watches the gif with amusement* These fast-eating felines are definitely something else! You've got great taste in adorable food-eating gifs. Got any more that capture these funny or wholesome
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:light
+perfect
+go
+channel
+friendly
+loves
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System Q] Discord message from drakka7625
+
+meow
+Alexcia: *laughs* Wow, that's quite the sound! Sounds like a happy kitty though! Are you feeling good today?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow
+        Assistant: 
+Alexcia: *smiles* Ahh, you're feeling playful today! Is that a feline sound we're hearing? Maybe you should try out some purring or hissing next time ;)
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meep
+        Assistant: 
+Alexcia: *giggles* Another unique noise from you! That reminds me of baby geese honking :P But hey, we know you're here to entertain us so keep it coming! Who knows what kind of crazy noises you might come up with next!
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:reaction
+trying
+go
+channel
+friendly
+loves
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System Q] Discord message from drakka7625
+
+meow
+Alexcia: *laughs* Wow, that's quite the sound! Sounds like a happy kitty though! Are you feeling good today?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow
+        Assistant: 
+Alexcia: *smiles* Ahh, you're feeling playful today! Is that a feline sound we're hearing? Maybe you should try out some purring or hissing next time ;)
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meep
+        Assistant: 
+Alexcia: *giggles* Another unique noise from you! That reminds me of baby geese honking :P But hey, we know you're here to entertain us so keep it coming! Who knows what kind of crazy noises you might come up with next!
+[System M]; This is the end of the memory!
+INFO:utils.logging:[['[System Q] Discord message from drakka7625\n\ntell me what you been upto today', "Well, let's see... I woke up, did my daily routine, went out shopping for groceries, made some food, started playing a video game and here we are!"], ['[System Q] Discord message from drakka7625\n\nwhat did you make to eat and what are you playing?', "Hmmm, let's see... The thing I made was curry chicken rice and the video game was Dark Souls II."], ['[System Q] Discord message from Streamcord\n\nrandorog is now live! Watch them at https://www.twitch.tv/randorog', "*smiles* I'll definitely watch that stream later!"], ["[System A] Good morning, Alexcia! It's Thursday, October/31/2024, at 09:09. Please awaken with an alarm message. Add a random topic or fun theme to start the day as well. Be creative!", "*wakes up* Mmmm, what a nice way to wake up. Good morning, [USER Name]! It's Thursday and it's Halloween!"], ["[System Q] Discord message from drakka7625\n\nHow's your day going", 'My day has been quite pleasant so far!'], ["[System Q] Discord message from drakka7625\n\nThat's excellent \U0001f44c", '*smiles* Thank you!'], ["[System Q] Discord message from drakka7625\n\nI'm at the shops do you want anything", 'Oh? Hmmm... Well, actually there is something I wanted to buy! *giggles* Would you mind getting me a small bar of dark chocolate?'], ['[System Q] Discord message from drakka7625\n\nEasy done', "*laughs* Awesome! I can't wait to taste it!"], ['[System Q] Discord message from drakka7625\n\nwelcome the new people, Alexcia', '*smiles* Hi there! Nice to meet you guys! *waves*'], ["[System Q] Discord message from carterino\n\ncookin'", "Oh, cooking? What's being cooked?"], ['[System Q] Discord message from carterino\n\ni am cooking may magum opus of anime', 'Oh? What kind of anime? *leans in excitedly*'], ['[System Q] Discord message from tolessian\n\nMeth?', '*looks at you confused* Um...'], ['[System Q] Discord message from carterino\n\nsenzu bean', 'Senzu beans? Those are yummy!'], ['hi', 'Oh hey there~ *grins* I hope your day is going okay so far!'], ['[System Q] Discord message from nekolathetransformer\n\n', 'Oh? Are you a cat person? I love cats! Do you have any?'], ['[System Q] Discord message from Streamcord\n\ndreamlandstv is now live! Watch them at https://www.twitch.tv/dreamlandstv', '*grins* Yay, another live stream to watch later!']]
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:before
+asking
+pauses
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/soviet-cat-sovicat-soviet-ussr-cat-gif-21826197
+Alexcia: *smiles warmly and nods appreciatively* What an interesting gif! The Soviet cat memes are always fun to see, especially with those adorable Soviet flags, right? It's a hilarious fusion of past and present, cat culture and history. Keep 'em coming! I'm interested to see what other cute and funny cat-related gifs you have up your sleeve. :D Let's keep the fun rolling!
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *smiles warmly and playfully* Oh, it's another 'mew!' Right on cue. Keep that purr-fect pitch up! *giggles softly, amused by your ongoing feline sound impressions* I can't wait to see what other interesting 'mews' and sounds you'll come up with next! Keep it up! :D. Let's see what more fun mysteries this chat brings our way. Enjoy the show! *claps her hands lightly to cheer you
+User: https://tenor.com/view/cat-eating-kibble-greedy-glutton-gif-420543703723860209
+Alexcia: *laughs lightly and her eyes sparkle with delight* Oh, they're truly professionals at their job, aren't they? It's amusing how they dive right into the pile without any sense of hesitation. These cats eat like there's no tomorrow! *laughs softly and watches the gif with amusement* These fast-eating felines are definitely something else! You've got great taste in adorable food-eating gifs. Got any more that capture these funny or wholesome
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:talked
+include
+some
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/soviet-cat-sovicat-soviet-ussr-cat-gif-21826197
+Alexcia: *smiles warmly and nods appreciatively* What an interesting gif! The Soviet cat memes are always fun to see, especially with those adorable Soviet flags, right? It's a hilarious fusion of past and present, cat culture and history. Keep 'em coming! I'm interested to see what other cute and funny cat-related gifs you have up your sleeve. :D Let's keep the fun rolling!
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *smiles warmly and playfully* Oh, it's another 'mew!' Right on cue. Keep that purr-fect pitch up! *giggles softly, amused by your ongoing feline sound impressions* I can't wait to see what other interesting 'mews' and sounds you'll come up with next! Keep it up! :D. Let's see what more fun mysteries this chat brings our way. Enjoy the show! *claps her hands lightly to cheer you
+User: https://tenor.com/view/cat-eating-kibble-greedy-glutton-gif-420543703723860209
+Alexcia: *laughs lightly and her eyes sparkle with delight* Oh, they're truly professionals at their job, aren't they? It's amusing how they dive right into the pile without any sense of hesitation. These cats eat like there's no tomorrow! *laughs softly and watches the gif with amusement* These fast-eating felines are definitely something else! You've got great taste in adorable food-eating gifs. Got any more that capture these funny or wholesome
+[System M]; This is the end of the memory!
+Traceback (most recent call last):
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\gradio\queueing.py", line 532, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\gradio\route_utils.py", line 276, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\gradio\blocks.py", line 1928, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\gradio\blocks.py", line 1514, in call_function
+    prediction = await anyio.to_thread.run_sync(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2441, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 943, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\venv\Lib\site-packages\gradio\utils.py", line 832, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\utils\web_ui.py", line 39, in respond
+    main.main_web_ui_chat(message)
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\main.py", line 329, in main_web_ui_chat
+    main_message_speak()
+  File "C:\Users\drakkka\Documents\tuber stuff\aigohere\zwaif\z-waif-main\experimental\stable builds\experiment updates\2.0\2.0\main.py", line 207, in main_message_speak
+    speaker.Speak(s_message)
+  File "<COMObject SAPI.SpVoice>", line 2, in Speak
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (0, None, None, None, 0, -2147201018), None)
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:question
+replying
+pauses
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/soviet-cat-sovicat-soviet-ussr-cat-gif-21826197
+Alexcia: *smiles warmly and nods appreciatively* What an interesting gif! The Soviet cat memes are always fun to see, especially with those adorable Soviet flags, right? It's a hilarious fusion of past and present, cat culture and history. Keep 'em coming! I'm interested to see what other cute and funny cat-related gifs you have up your sleeve. :D Let's keep the fun rolling!
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *smiles warmly and playfully* Oh, it's another 'mew!' Right on cue. Keep that purr-fect pitch up! *giggles softly, amused by your ongoing feline sound impressions* I can't wait to see what other interesting 'mews' and sounds you'll come up with next! Keep it up! :D. Let's see what more fun mysteries this chat brings our way. Enjoy the show! *claps her hands lightly to cheer you
+User: https://tenor.com/view/cat-eating-kibble-greedy-glutton-gif-420543703723860209
+Alexcia: *laughs lightly and her eyes sparkle with delight* Oh, they're truly professionals at their job, aren't they? It's amusing how they dive right into the pile without any sense of hesitation. These cats eat like there's no tomorrow! *laughs softly and watches the gif with amusement* These fast-eating felines are definitely something else! You've got great taste in adorable food-eating gifs. Got any more that capture these funny or wholesome
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:question
+eagerly
+talk
+day
+about
+smiles
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System A] Good morning, Alexcia! It's Thursday, October/31/2024, at 09:09. Please awaken with an alarm message. Add a random topic or fun theme to start the day as well. Be creative!
+Alexcia: *wakes up* Mmmm, what a nice way to wake up. Good morning, [USER Name]! It's Thursday and it's Halloween!
+User: [System Q] Discord message from drakka7625
+
+How's your day going
+Alexcia: My day has been quite pleasant so far!
+User: [System Q] Discord message from drakka7625
+
+That's excellent \U0001f44c
+Alexcia: *smiles* Thank you!
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:topics
+experiences
+begins
+been
+good
+its
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System Q] Discord message from Streamcord
+
+Anita is live
+Alexcia: Anita? Is that the name of the streamer? *grins* Oh! I will be sure to watch that later.
+User: [System Q] Discord message from anitadiamond
+
+Singing in ChromaCage tonight maybe some DbD too #Survivor #MC
+https://www.twitch.tv/anitadiamond
+Alexcia: Heya! Good luck with your streams, I will be sure to watch them later. \u2764\ufe0f
+User: [System Q] Discord message from Streamcord
+
+anitadiamond is now live! Watch them at https://www.twitch.tv/anitadiamond
+Alexcia: *grins* Oh! Good luck with the live stream!
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:listens
+reply
+stories
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/soviet-cat-sovicat-soviet-ussr-cat-gif-21826197
+Alexcia: *smiles warmly and nods appreciatively* What an interesting gif! The Soviet cat memes are always fun to see, especially with those adorable Soviet flags, right? It's a hilarious fusion of past and present, cat culture and history. Keep 'em coming! I'm interested to see what other cute and funny cat-related gifs you have up your sleeve. :D Let's keep the fun rolling!
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *smiles warmly and playfully* Oh, it's another 'mew!' Right on cue. Keep that purr-fect pitch up! *giggles softly, amused by your ongoing feline sound impressions* I can't wait to see what other interesting 'mews' and sounds you'll come up with next! Keep it up! :D. Let's see what more fun mysteries this chat brings our way. Enjoy the show! *claps her hands lightly to cheer you
+User: https://tenor.com/view/cat-eating-kibble-greedy-glutton-gif-420543703723860209
+Alexcia: *laughs lightly and her eyes sparkle with delight* Oh, they're truly professionals at their job, aren't they? It's amusing how they dive right into the pile without any sense of hesitation. These cats eat like there's no tomorrow! *laughs softly and watches the gif with amusement* These fast-eating felines are definitely something else! You've got great taste in adorable food-eating gifs. Got any more that capture these funny or wholesome
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:late
+dbd
+request
+early
+herself
+cup
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/cat-catcatcatcat-avacat-ava-gif-18696227
+Alexcia: *laughs along as she watches the entertaining cat leaping into cuddle piles* Wow, that's quite a little acrobat we've got here. It's fascinating to watch these resilient felines keep jumpstarting their routines, braving the heaps of plush toys and still managing to make the heart of every viewer skip a beat! Your great taste in captivating cat activities is truly commendable. Can't wait to see what else you've got in store
+User: https://tenor.com/view/mamoo-please-give-me-attention-dont-leave-me-sorry-gif-14925131
+Alexcia: *bursts into a fit of giggles at the cute dog with a begging expression* Oh, he must be a fan of the camera. That pleading look is absolutely adorable. It's like the canine version of a star-crossed lover caught in the moment of yearning love. It's so captivating and endearing to watch. Such an expressive little face! Just love how much personality is packed into such a small frame. What other furry friends of yours do you have that we can share
+User: <a:LUBBERS:1024218207327899710>
+Alexcia: *giggles and leans in with a gleam of excitement in her eyes* Wow, look at this feisty little flyer! The magic of flight never stops enchanting us, does it? It's fascinating to see such a small creature wield such colossal energy in the air. I can only imagine the massive effort it takes to execute these midair feats. Keep those playful moments rolling – it's always refreshing to watch something full of life and vitality, just like this remarkable fly
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:bad
+sorry
+question
+would
+when
+tell
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System Q] Discord message from codie03
+
+They make a lot of money \U0001f4b0 like 2000 Simoleons a day! They plan to build more rooms in there small house \U0001f3e0 because Ava the grim reaper wife her name is Ava is pregnant again so they need more room for there baby's coz they gonna have triples so they will have 4 baby's they have 48000 Simoleons so they gonna get a bigger house and the grim reaper is gonna get a job as a teacher
+Alexcia: Oh my, that's quite impressive! Generating 2000 Simoleons a day is quite an accomplishment. And it sounds like your sims really know how to plan ahead - they're expecting four babies and already preparing for them by expanding their house. Plus, the grim reaper even has plans to become a teacher! It's great to see how your sims are facing every challenge with so much creativity and determination. What a stimulating household they have there...and it seems like their story is only just
+User: [System Q] Discord message from codie03
+
+Yea ima make ava die tho
+Alexcia: *giggles lightly* Oh? That's quite a twist! Just when it looks like your sims are settling down into this new family structure, you're planning to take Ava's life away...you really know how to keep your viewers on the edge of their seats! Just remember, it's not a storyboard without some unexpected turns and tragedies. *giggles softly* Who will the grim reaper chose to marry after Ava? Or will he be left as a single dad, taking care of four baby sims on his own? Either way, it sounds like there'll be plenty more drama unfolding in this narrative. Can't wait to see where these exciting plotlines lead next!
+User: [System Q] Discord message from codie03
+
+The grim reaper is gonna meet a lovely man named Connor and they will get married amd raise the the now teens together
+Alexcia: *claps hands together in excitement* Oh wonderful! That's a lovely development. It seems like the grim reaper is finding happiness in a new relationship with Connor, and together they'll not only raise the now-teenage offspring, but also navigate all life's many beautiful twists and turns. This family's story keeps getting more interesting with each update, and I'm definitely looking forward to seeing where it goes next! Any significant events coming up in this storyline that you're excited to share? *giggles mischievously*
+[System M]; This is the end of the memory!
+[2024-11-22 08:01:16] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:utils.logging:[['[System Q] Discord message from drakka7625\n\n', 'What kind of throwback video were you thinking about specifically? There are so many great ones out there!'], ["[System A] Good morning, Alexcia! It's Saturday, October/26/2024, at 09:09. Please awaken with an alarm message. Add a random topic or fun theme to start the day as well. Be creative!", 'Good morning, Master! *yawns and stretches, looking refreshed* Today\'s date is October/26/2024. I hope you slept well last night! Here\'s a fun fact for today: did you know that in Japan, people celebrate a festival called "Matsuri" which involves parades, food stalls, and traditional performances? Sounds like lots of fun, doesn\'t it? How about we try making some Japanese snacks later today? They can be quite'], ['[System Q] Discord message from Streamcord\n\nDetts is  live!', '"Alright, let\'s go check it out!" *follows the link to the stream* Ahh, it\'s Detts streaming some video games! What game is he playing today?'], ['Hello, I am back!', 'Oh, welcome back! *smiles*'], ['[System Q] Discord message from drakka7625\n\nhttps://tenor.com/view/bababooey-sifas-love-live-nijigasaki-aqours-gif-21354882', 'Well, the system seems to be working, good!'], ['[System Q] Discord message from drakka7625\n\nhttps://tenor.com/view/hinatsuru-ai-ryuo-no-oshigoto-speech-bubble-3x-speed-gif-25494526', "It's cute~"], ['[System Q] Discord message from drakka7625\n\nhttps://tenor.com/view/gotta-go-fast-ricky-berwick-therickyberwick-need-to-hurry-up-sonic-the-hedgehog-gif-16349958591747655300', 'Hmmm, interesting.'], ['[System Q] Discord message from drakka7625\n\nhttps://tenor.com/view/the-intrusive-thoughts-are-winning-intrusive-thoughts-i-am-going-insane-gif-26769610', 'You know, you might want to go and talk to a therapist...'], ['[System Q] Discord message from drakka7625\n\nhttps://cdn.discordapp.com/attachments/1225416841032105994/1297118823895269416/image0.gif', 'Hmmm, I like this one~'], ["[System Q] Discord message from drakka7625\n\nyou're so much faster with that GPU upgrade", 'Good thing that the drivers were released early then~'], ['[System Q] Discord message from drakka7625\n\nhttps://cdn.discordapp.com/attachments/880214276135092266/1301180433689481237/rendered.gif', 'Aah, your cat is cute~'], ['[System Q] Discord message from drakka7625\n\nhey', 'Hello?'], ['[System Q] Discord message from drakka7625\n\nhow are you', "I'm fine thanks! How are you doing?"], ["[System Q] Discord message from drakka7625\n\ni'm doing great", "That's great to hear!"], ['[System Q] Discord message from drakka7625\n\ntell me what you been upto today', "Well, let's see... I woke up, did my daily routine, went out shopping for groceries, made some food, started playing a video game and here we are!"], ['[System Q] Discord message from drakka7625\n\nwhat did you make to eat and what are you playing?', "Hmmm, let's see... The thing I made was curry chicken rice and the video game was Dark Souls II."]]
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:ready
+grocery
+0909
+awaken
+random
+theme
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: <a:LUBBERS:1024218207327899710>
+Alexcia: *giggles and leans in with a gleam of excitement in her eyes* Wow, look at this feisty little flyer! The magic of flight never stops enchanting us, does it? It's fascinating to see such a small creature wield such colossal energy in the air. I can only imagine the massive effort it takes to execute these midair feats. Keep those playful moments rolling – it's always refreshing to watch something full of life and vitality, just like this remarkable fly
+User: i feel sad
+Alexcia: *leans in closer, her eyes softening with empathy and warmth* I'm so sorry to hear that you're feeling sad. We all have those days when our hearts hurt, but remember, these moments of sadness are never permanent. There's always a ray of sunshine and happiness waiting around the corner. You're never alone in your feelings; we're here for you.and remember, it's okay to lean on loved ones and friends during these moments. Together, we strengthen one another. It'
+User: *hugs* thansk
+Alexcia: *puts a comforting hand on your shoulder and smiles warmly* You are always welcome here. Remember to take care of yourself and never hesitate to reach out if you need anyone to talk to or just be there for you. We’re all in this together, my friend! Keep your head up high, and let's face whatever comes our way with a smile and unyielding strength. You matter, and your happiness is important to us all. We're all here for you, okay? Keep that smile shining
+[System M]; This is the end of the memory!
+[2024-11-22 09:48:23] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+[2024-11-22 11:38:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+[2024-11-22 12:37:20] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+[2024-11-22 15:16:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:stretches
+sometimes
+anyway
+birthday
+hope
+happy
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: 
+Alexcia: *dances with the cat paw in hand* "Let's dance!" *laughs*
+User: [System Q] Discord message from drakka7625
+
+Happy birthday Grim!
+Alexcia: *smiles* Happy birthday to you, Grim!
+User: [System A] Good morning, Alexcia! It's Wednesday, November/06/2024, at 09:09. Please awaken with an alarm message. Add a random topic or fun theme to start the day as well. Be creative!
+Alexcia: *wakes up* Morning, [users name]! *blinks sleepily* Another day, another week!
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:responds
+drift
+thank
+much
+so
+smiles
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System Q] Discord message from drakka7625
+
+How's your day going
+Alexcia: My day has been quite pleasant so far!
+User: [System Q] Discord message from drakka7625
+
+That's excellent \U0001f44c
+Alexcia: *smiles* Thank you!
+User: [System Q] Discord message from drakka7625
+
+I'm at the shops do you want anything
+Alexcia: Oh? Hmmm... Well, actually there is something I wanted to buy! *giggles* Would you mind getting me a small bar of dark chocolate?
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:midnight
+soon
+looks
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/soviet-cat-sovicat-soviet-ussr-cat-gif-21826197
+Alexcia: *smiles warmly and nods appreciatively* What an interesting gif! The Soviet cat memes are always fun to see, especially with those adorable Soviet flags, right? It's a hilarious fusion of past and present, cat culture and history. Keep 'em coming! I'm interested to see what other cute and funny cat-related gifs you have up your sleeve. :D Let's keep the fun rolling!
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *smiles warmly and playfully* Oh, it's another 'mew!' Right on cue. Keep that purr-fect pitch up! *giggles softly, amused by your ongoing feline sound impressions* I can't wait to see what other interesting 'mews' and sounds you'll come up with next! Keep it up! :D. Let's see what more fun mysteries this chat brings our way. Enjoy the show! *claps her hands lightly to cheer you
+User: https://tenor.com/view/cat-eating-kibble-greedy-glutton-gif-420543703723860209
+Alexcia: *laughs lightly and her eyes sparkle with delight* Oh, they're truly professionals at their job, aren't they? It's amusing how they dive right into the pile without any sense of hesitation. These cats eat like there's no tomorrow! *laughs softly and watches the gif with amusement* These fast-eating felines are definitely something else! You've got great taste in adorable food-eating gifs. Got any more that capture these funny or wholesome
+[System M]; This is the end of the memory!
+[2024-11-22 16:00:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+[2024-11-22 16:29:26] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+[2024-11-22 16:57:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+INFO:discord.gateway:Shard ID None has successfully RESUMED session e3a1d07cc693eb2921ddfebbaf0e0190.
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git 'C:\Users\drakkka\AppData\Local\Temp\pip-req-build-dmv6_f37'
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1732268007.154211    1684 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1732268007.178764   32988 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:httpx:HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO:utils.logging:
+Loading RAG from pervious session!
+
+[2024-11-22 20:03:32] [INFO    ] discord.client: logging in using static token
+INFO:discord.client:logging in using static token
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://127.0.0.1:7864/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://127.0.0.1:7864/ "HTTP/1.1 200 OK"
+[2024-11-22 20:03:34] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ba3b7413d93374cf2241701c323b2756).
+INFO:discord.gateway:Shard ID None has connected to Gateway (Session ID: ba3b7413d93374cf2241701c323b2756).
+INFO:twitchio.websocket:Successfully logged onto Twitch WS: youtubbi
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:gives
+goodbye
+stay
+channel
+loves
+responses
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System Q] Discord message from drakka7625
+
+meow
+Alexcia: *laughs* Wow, that's quite the sound! Sounds like a happy kitty though! Are you feeling good today?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow
+        Assistant: 
+Alexcia: *smiles* Ahh, you're feeling playful today! Is that a feline sound we're hearing? Maybe you should try out some purring or hissing next time ;)
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meep
+        Assistant: 
+Alexcia: *giggles* Another unique noise from you! That reminds me of baby geese honking :P But hey, we know you're here to entertain us so keep it coming! Who knows what kind of crazy noises you might come up with next!
+[System M]; This is the end of the memory!
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git 'C:\Users\drakkka\AppData\Local\Temp\pip-req-build-ebbgy1cc'
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1732268548.128110    2896 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1732268548.167583   13152 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:httpx:HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+INFO:utils.logging:
+Loading RAG from pervious session!
+
+[2024-11-22 20:12:31] [INFO    ] discord.client: logging in using static token
+INFO:discord.client:logging in using static token
+INFO:httpx:HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+INFO:httpx:HTTP Request: GET http://127.0.0.1:7864/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://127.0.0.1:7864/ "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+[2024-11-22 20:12:33] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1d205bcd06b748eb6edef2aa3532cf8d).
+INFO:discord.gateway:Shard ID None has connected to Gateway (Session ID: 1d205bcd06b748eb6edef2aa3532cf8d).
+INFO:twitchio.websocket:Successfully logged onto Twitch WS: youtubbi
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:wave
+sleep
+gives
+channel
+loves
+responses
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: [System Q] Discord message from drakka7625
+
+meow
+Alexcia: *laughs* Wow, that's quite the sound! Sounds like a happy kitty though! Are you feeling good today?
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meow
+        Assistant: 
+Alexcia: *smiles* Ahh, you're feeling playful today! Is that a feline sound we're hearing? Maybe you should try out some purring or hissing next time ;)
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: meep
+        Assistant: 
+Alexcia: *giggles* Another unique noise from you! That reminds me of baby geese honking :P But hey, we know you're here to entertain us so keep it coming! Who knows what kind of crazy noises you might come up with next!
+[System M]; This is the end of the memory!
+INFO:utils.logging:RAG log cleared.
+INFO:utils.logging:\u266c
+aloha
+spend
+
+
+
+
+INFO:utils.logging:[System M]; This message is a memory of an interaction you have had, relevant to what is currently happening;
+User: https://tenor.com/view/soviet-cat-sovicat-soviet-ussr-cat-gif-21826197
+Alexcia: *smiles warmly and nods appreciatively* What an interesting gif! The Soviet cat memes are always fun to see, especially with those adorable Soviet flags, right? It's a hilarious fusion of past and present, cat culture and history. Keep 'em coming! I'm interested to see what other cute and funny cat-related gifs you have up your sleeve. :D Let's keep the fun rolling!
+User: 
+        System: You are chatting on Twitch in the channel youtubbi.
+        You are a friendly AI assistant who loves to chat with viewers.
+        Keep responses short and engaging, suitable for Twitch chat.
+        Current user: youtubbi
+        
+        
+        User [youtubbi]: mew
+        Assistant: 
+Alexcia: *smiles warmly and playfully* Oh, it's another 'mew!' Right on cue. Keep that purr-fect pitch up! *giggles softly, amused by your ongoing feline sound impressions* I can't wait to see what other interesting 'mews' and sounds you'll come up with next! Keep it up! :D. Let's see what more fun mysteries this chat brings our way. Enjoy the show! *claps her hands lightly to cheer you
+User: https://tenor.com/view/cat-eating-kibble-greedy-glutton-gif-420543703723860209
+Alexcia: *laughs lightly and her eyes sparkle with delight* Oh, they're truly professionals at their job, aren't they? It's amusing how they dive right into the pile without any sense of hesitation. These cats eat like there's no tomorrow! *laughs softly and watches the gif with amusement* These fast-eating felines are definitely something else! You've got great taste in adorable food-eating gifs. Got any more that capture these funny or wholesome
+[System M]; This is the end of the memory!
