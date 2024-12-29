@@ -4,7 +4,6 @@ import json
 import base64
 import time
 import random
-
 import requests
 import utils.cane_lib
 import utils.based_rag
@@ -13,8 +12,10 @@ from dotenv import load_dotenv
 import utils.settings
 import utils.retrospect
 import utils.lorebook
-
-
+from utils.emotion_recognizer import recognize_emotion_from_text
+from utils.logging import track_response_time
+import logging 
+from utils.contextual_memory import EnhancedMemorySystem
 load_dotenv()
 
 HOST = '127.0.0.1:5000'
@@ -61,6 +62,7 @@ def run(user_input, temp_level):
     global force_token_count
     global currently_sending_message
 
+    logging.info("Running with user input: %s and temp level: %d", user_input, temp_level)
 
     # Message that is currently being sent
     currently_sending_message = user_input
@@ -131,6 +133,7 @@ def run(user_input, temp_level):
         'preset': preset
     }
 
+    logging.info("Sending request to API: %s", request)
     response = requests.post(URI, headers=headers, json=request, verify=False)
 
 
@@ -204,6 +207,7 @@ def send_via_oogabooga(user_input):
     # Run
     run(user_input, 0)
 
+@track_response_time
 def receive_via_oogabooga():
     return received_message
 
@@ -285,6 +289,7 @@ def save_histories():
 #
 
 
+@track_response_time
 def soft_reset():
 
     # Saftey breaker for if the previous message was also a Soft Reset / System D
@@ -774,4 +779,89 @@ def force_tokens_count(tokens):
     global forced_token_level, force_token_count
     forced_token_level = tokens
     force_token_count = True
+
+
+def generate_emotional_response(message_content, previous_messages, memory_manager, user_id):
+    # Analyze the message content for emotion and intensity
+    emotion, intensity = analyze_emotion(message_content)  # Implement this function
+    expression = DynamicExpressionMapper().get_expression(emotion)
+
+    # Store the current emotional state
+    memory_manager.store_emotional_state(user_id, emotion, intensity)
+
+    # Contextual awareness: Check previous messages for emotional history
+    emotional_history = memory_manager.get_user_emotional_history(user_id)
+    context_response = generate_contextual_response(emotional_history)
+
+    # Generate a response based on the emotion, intensity, and context
+    if emotion == "happy":
+        response = f"I'm so glad to hear that! {expression}"
+    elif emotion == "very_happy":
+        response = f"That's fantastic! I'm thrilled for you! {expression}"
+    elif emotion == "sad":
+        response = f"I'm here for you. {expression}"
+    elif emotion == "very_sad":
+        response = f"I'm really sorry to hear that. It's okay to feel this way. {expression}"
+    elif emotion == "angry":
+        response = f"I understand that you're upset. Want to talk about it? {expression}"
+    else:
+        response = f"I'm not sure how to respond to that. Can you tell me more? {expression}"
+
+    # Combine context response with the main response
+    return f"{context_response} {response}"
+
+def generate_contextual_response(user_input, user_context, video_context=None):
+    # Combine context sources
+    full_context = {
+        'user_history': user_context,
+        'video_analysis': video_context,
+        'current_interaction': user_input
+    }
+    
+    # Generate response using the enhanced context
+    response = run(
+        context=full_context,
+        temp_level=0.7,  # Adjustable temperature
+        use_memory=True
+    )
+    
+    return response
+
+
+class DynamicExpressionMapper:
+    def get_expression(self, emotion):
+        # Define a simple mapping of emotions to expressions
+        expression_map = {
+            "happy": ":)",
+            "very_happy": ":D",
+            "sad": ":(",
+            "very_sad": ":'(",
+            "angry": ">:(",
+            "neutral": ":|"
+        }
+        return expression_map.get(emotion, ":|")
+
+def analyze_emotion(message_content):
+    """Analyze the message content to determine emotion and intensity."""
+    emotion = recognize_emotion_from_text(message_content)
+    intensity = calculate_intensity(message_content)
+    return emotion, intensity
+
+def calculate_intensity(message_content):
+    """Calculate the intensity of the emotion based on message content."""
+    # Simple heuristic: more exclamation marks and longer messages indicate higher intensity
+    exclamation_count = message_content.count('!')
+    message_length = len(message_content)
+
+    # Base intensity on exclamation marks and message length
+    intensity = 0.5 + (exclamation_count * 0.1) + (message_length / 1000)
+
+    # Ensure intensity is within 0 to 1 range
+    intensity = min(1.0, max(0.0, intensity))
+    return intensity
+
+def process_youtube_url(url):
+    memory_system = EnhancedMemorySystem()
+    video_context = memory_system.process_interaction({"content": url}, platform="youtube")
+    return video_context
 
