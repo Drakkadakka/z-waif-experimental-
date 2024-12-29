@@ -1,13 +1,13 @@
 opencv-python
-gradio==4.36.1
+gradio==4.44.1
 keyboard~=0.13.5
 mouse~=0.7.1
 PyGetWindow~=0.0.9
 PythMC~=1.2.2
 sounddevice~=0.4.6
-colorama
-humanize~=4.7.0
-emoji~=2.9.0
+colorama>=0.4.6
+humanize>=4.7.0
+emoji>=2.9.0
 discord.py[voice]>=2.0.0
 requests~=2.31.0
 python-dotenv~=1.0.0
@@ -21,7 +21,7 @@ websockets>=11.0.3
 pathlib
 sentence-transformers>=2.2.0
 --find-links https://download.pytorch.org/whl/cu118
-torch
+torch>=2.0.0
 torchvision
 torchaudio
 scipy
@@ -29,13 +29,24 @@ gtts>=2.3.1
 PyNaCl>=1.5.0
 yt-dlp>=2023.12.30
 librosa  # For audio analysis
-transformers  # For emotion recognition and NLP tasks
+transformers>=4.36.0
 Flask==2.2.3  # For creating the API
 Flask-Cors  # For handling CORS
 mediapipe  # For face and hand tracking
 APScheduler  # For scheduling tasks
-Pillow  # For image processing
+Pillow>=10.0.0
 textblob  # For context-aware emotional responses
+psutil>=5.9.0  # For system resource monitoring
+
+# For streaming support
+sseclient-py==1.7.2
+aiohttp>=3.8.1
+asyncio>=3.4.3
+requests>=2.31.0
+
+# For machine learning and acceleration
+accelerate>=0.25.0
+bitsandbytes>=0.41.1
 
 # Optional but recommended for better audio processing
 # Note: FFmpeg should be installed separately through your system's package manager
@@ -48,3 +59,8 @@ pytest  # For testing
 black  # For code formatting
 mypy  # For type checking
 jupyter  # For Jupyter notebooks
+
+# Added for Performance Metrics Tracking and Dashboard
+dash>=2.0.0
+plotly>=5.0.0
+

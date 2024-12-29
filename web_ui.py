@@ -1,4 +1,6 @@
 import random
+import logging
+from datetime import timedelta
 
 import gradio
 import gradio as gr
@@ -7,7 +9,47 @@ import API.Oogabooga_Api_Support
 import utils.logging
 import utils.settings
 import utils.hotkeys
+import plotly.graph_objects as go
+from utils.performance_metrics import get_system_metrics
+from utils.personality_metrics import (
+    get_personality_metrics,
+    get_interaction_patterns,
+    update_personality_weights,
+    update_personality_config,
+    PersonalityDimension
+)
+from utils.config import Config
+from utils.error_boundary import ErrorBoundary
 
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+@ErrorBoundary.system()
+class VisualUI:
+    def __init__(self):
+        self.config = Config()
+        self.config.load()
+        self.preview_visible = False
+        self.streaming = False
+        
+    def create_interface(self):
+        with gr.Blocks(theme=gr.themes.Base(primary_hue=self.config.ui.primary_color)) as interface:
+            with gr.Row():
+                with gr.Column():
+                    input_box = gr.Textbox(
+                        placeholder="Type your message...",
+                        show_label=False
+                    )
+                    with gr.Row():
+                        send_btn = gr.Button(
+                            "Send", 
+                            variant="primary",
+                            visible=self.config.ui.enable_send_button
+                        )
+                        reroll_btn = gr.Button("Reroll")
+                        interrupt_btn = gr.Button("Stop")
+                        
+        return interface
 
 based_theme = gr.themes.Base(
     primary_hue="fuchsia",
@@ -15,9 +57,6 @@ based_theme = gr.themes.Base(
     neutral_hue="zinc",
 
 )
-
-
-
 
 
 with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
@@ -37,31 +76,20 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
         def respond(message, chat_history):
             main.main_web_ui_chat(message)
-
-            # Retrieve the result now
             message_reply = API.Oogabooga_Api_Support.receive_via_oogabooga()
-
             chat_history.append((message, message_reply))
-
             return "", API.Oogabooga_Api_Support.ooga_history[-30:]
 
         def update_chat():
-            # Return whole chat, plus the one I have just sent
             if API.Oogabooga_Api_Support.currently_sending_message != "":
-
                 chat_combine = API.Oogabooga_Api_Support.ooga_history[-30:]
                 chat_combine.append([API.Oogabooga_Api_Support.currently_sending_message, ""])
-
                 return chat_combine[-30:]
-
-
-            # Return whole chat, last 30
             else:
                 return API.Oogabooga_Api_Support.ooga_history[-30:]
 
-
         msg.submit(respond, [msg, chatbot], [msg, chatbot])
-        demo.load(update_chat, every=0.05, outputs=[chatbot])
+        demo.load(update_chat, every=1, outputs=[chatbot])
 
         #
         # Basic Mic Chat
@@ -80,7 +108,6 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
             recording_button.click(fn=recording_button_click)
 
             recording_checkbox_view = gr.Checkbox(label="Now Recording!")
-
 
 
 
@@ -144,8 +171,6 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 
 
-
-
         def update_settings_view():
             return utils.hotkeys.get_speak_input(), utils.hotkeys.get_autochat_toggle()
 
@@ -153,8 +178,111 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
         demo.load(update_settings_view, every=0.05,
                   outputs=[recording_checkbox_view, autochat_checkbox_view])
 
+    #
+    # PERFORMANCE METRICS
+    #
 
+    with gr.Tab("Performance Metrics"):
+        with gr.Row():
+            cpu_usage = gr.Label("CPU Usage: 0%")
+            memory_usage = gr.Label("Memory Usage: 0%")
 
+        def update_metrics():
+            metrics = get_system_metrics()
+            return (
+                f"CPU Usage: {metrics['cpu'][-1]:.1f}%",
+                f"Memory Usage: {metrics['memory'][-1]:.1f}%"
+            )
+
+        demo.load(update_metrics, every=2, outputs=[cpu_usage, memory_usage])
+
+        # Performance Graph
+        performance_plot = gr.Plot(label="System Performance")
+
+        def update_plot():
+            metrics = get_system_metrics()
+            fig = go.Figure()
+            
+            fig.add_trace(go.Scatter(
+                x=metrics['time'],
+                y=metrics['cpu'],
+                name='CPU Usage (%)',
+                mode='lines'
+            ))
+            
+            fig.add_trace(go.Scatter(
+                x=metrics['time'],
+                y=metrics['memory'],
+                name='Memory Usage (%)',
+                mode='lines'
+            ))
+            
+            fig.update_layout(
+                title='System Performance',
+                xaxis_title='Time',
+                yaxis_title='Usage (%)',
+                yaxis_range=[0, 100]
+            )
+            
+            return fig
+
+        demo.load(update_plot, every=10, outputs=[performance_plot])
+
+    #
+    # EMOTION METRICS
+    #
+
+    with gr.Tab("Emotion Metrics"):
+        with gr.Row():
+            current_emotion = gr.Label("Current Emotion: Neutral")
+            emotion_intensity = gr.Label("Intensity: 0%")
+
+        def update_emotion_metrics():
+            if API.Oogabooga_Api_Support.currently_sending_message:
+                emotion, intensity = API.Oogabooga_Api_Support.analyze_emotion(
+                    API.Oogabooga_Api_Support.currently_sending_message
+                )
+                return (
+                    f"Current Emotion: {emotion.title()}",
+                    f"Intensity: {intensity*100:.1f}%"
+                )
+            return "Current Emotion: Neutral", "Intensity: 0%"
+
+        demo.load(update_emotion_metrics, every=1, outputs=[current_emotion, emotion_intensity])
+
+        # Emotion Graph
+        emotion_plot = gr.Plot(label="Emotion Analysis")
+
+        def update_emotion_plot():
+            messages = API.Oogabooga_Api_Support.ooga_history[-10:]  # Last 10 messages
+            emotions = []
+            intensities = []
+            times = list(range(len(messages)))
+            
+            for msg in messages:
+                emotion, intensity = API.Oogabooga_Api_Support.analyze_emotion(msg[1])  # Analyze assistant responses
+                emotions.append(emotion)
+                intensities.append(intensity * 100)
+            
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(
+                x=times,
+                y=intensities,
+                name='Emotion Intensity',
+                mode='lines',
+                line=dict(color='fuchsia')
+            ))
+            
+            fig.update_layout(
+                title='Emotion Intensity Over Time',
+                xaxis_title='Messages',
+                yaxis_title='Intensity (%)',
+                yaxis_range=[0, 100]
+            )
+            
+            return fig
+
+        demo.load(update_emotion_plot, every=5, outputs=[emotion_plot])
 
     #
     # VISUAL
@@ -256,8 +384,6 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
             demo.load(update_visual_view, every=0.05,
                       outputs=[cam_use_image_feed_checkbox_view, cam_direct_talk_checkbox_view, cam_reply_after_checkbox_view, cam_image_preview_checkbox_view])
-
-
 
     #
     # SETTINGS
@@ -410,7 +536,226 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
         demo.load(update_settings_view, every=0.05, outputs=[hotkey_checkbox_view, shadowchats_checkbox_view, newline_cut_checkbox_view])
 
+    #
+    # PERSONALITY ADJUSTMENTS
+    #
 
+    with gr.Tab("Personality"):
+        # Main Status Display
+        with gr.Row():
+            personality_status = gr.Label("Current Personality State")
+            interaction_score = gr.Label("Interaction Score: 0")
+            emotional_resonance = gr.Label("Emotional Resonance: 0")
+
+        # Personality Dimension Sliders
+        with gr.Column():
+            with gr.Row():
+                extraversion = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Extraversion"
+                )
+                agreeableness = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Agreeableness"
+                )
+            with gr.Row():
+                conscientiousness = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Conscientiousness"
+                )
+                openness = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Openness"
+                )
+            with gr.Row():
+                neuroticism = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Neuroticism"
+                )
+                creativity = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Creativity"
+                )
+            with gr.Row():
+                empathy = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Empathy"
+                )
+                assertiveness = gr.Slider(
+                    minimum=-1, maximum=1, value=0, step=0.1,
+                    label="Assertiveness"
+                )
+
+        # Advanced Settings
+        with gr.Accordion("Advanced Settings", open=False):
+            with gr.Row():
+                adaptation_threshold = gr.Slider(
+                    minimum=0, maximum=1, value=0.3, step=0.05,
+                    label="Adaptation Threshold"
+                )
+                context_decay = gr.Slider(
+                    minimum=0.5, maximum=1, value=0.95, step=0.01,
+                    label="Context Decay Rate"
+                )
+            with gr.Row():
+                emotional_memory_days = gr.Number(
+                    value=7, label="Emotional Memory Span (days)"
+                )
+                personality_momentum = gr.Slider(
+                    minimum=0, maximum=1, value=0.8, step=0.05,
+                    label="Personality Shift Momentum"
+                )
+
+        # Visualization Tabs
+        with gr.Tabs():
+            # Personality Timeline
+            with gr.Tab("Personality Evolution"):
+                personality_plot = gr.Plot(label="Personality Dimensions Over Time")
+            
+            # Interaction Analysis
+            with gr.Tab("Interaction Patterns"):
+                with gr.Row():
+                    interaction_plot = gr.Plot(label="Interaction History")
+                    emotion_dist_plot = gr.Plot(label="Emotional Distribution")
+            
+            # Context Analysis
+            with gr.Tab("Context Analysis"):
+                with gr.Row():
+                    context_plot = gr.Plot(label="Context Influence")
+                    topic_coherence_plot = gr.Plot(label="Topic Coherence")
+
+        def update_personality_view():
+            metrics = get_personality_metrics()
+            patterns = get_interaction_patterns()
+            
+            # Update status labels
+            status = f"Profile: {metrics['dominant_trait']} | Depth: {patterns['depth_trend']:.2f}"
+            score = f"Interaction Score: {metrics['interaction_score']:.2f}"
+            resonance = f"Emotional Resonance: {patterns['emotional_connection']:.2f}"
+            
+            # Update dimension sliders
+            sliders = [
+                metrics[dim.value] for dim in PersonalityDimension
+            ]
+            
+            # Create personality evolution plot
+            fig1 = go.Figure()
+            for dim in PersonalityDimension:
+                fig1.add_trace(go.Scatter(
+                    x=metrics['timestamps'],
+                    y=metrics[dim.value + '_history'],
+                    name=dim.value.title(),
+                    mode='lines'
+                ))
+            
+            # Create interaction pattern plots
+            fig2 = go.Figure()
+            fig2.add_trace(go.Scatter(
+                x=patterns['timestamps'],
+                y=patterns['interaction_scores'],
+                name='Interaction Score',
+                mode='lines',
+                line=dict(color='fuchsia')
+            ))
+            
+            # Create emotional distribution plot
+            fig3 = go.Figure(data=[go.Pie(
+                labels=list(patterns['emotion_distribution'].keys()),
+                values=list(patterns['emotion_distribution'].values()),
+                hole=.3
+            )])
+            
+            # Create context influence plot
+            fig4 = go.Figure()
+            fig4.add_trace(go.Heatmap(
+                z=patterns['context_influence'],
+                x=list(PersonalityDimension.__members__.keys()),
+                y=list(patterns['context_tags']),
+                colorscale='Viridis'
+            ))
+            
+            # Create topic coherence plot
+            fig5 = go.Figure()
+            fig5.add_trace(go.Scatter(
+                x=patterns['timestamps'],
+                y=patterns['topic_coherence'],
+                name='Topic Coherence',
+                mode='lines',
+                line=dict(color='indigo')
+            ))
+            
+            return (
+                status, score, resonance,
+                *sliders,
+                fig1, fig2, fig3, fig4, fig5
+            )
+
+        def apply_personality_changes(*values):
+            weights = {
+                dim.value: value 
+                for dim, value in zip(PersonalityDimension, values)
+            }
+            update_personality_weights(weights)
+            return f"Updated personality weights: {', '.join(f'{k}={v:.2f}' for k,v in weights.items())}"
+
+        def update_advanced_settings(threshold, decay, memory_days, momentum):
+            update_personality_config({
+                'adaptation_threshold': threshold,
+                'context_decay_rate': decay,
+                'emotional_memory_span': timedelta(days=memory_days),
+                'personality_shift_momentum': momentum
+            })
+            return f"Updated configuration settings"
+
+        # Update personality metrics every 5 seconds
+        demo.load(
+            update_personality_view,
+            every=5,
+            outputs=[
+                personality_status,
+                interaction_score,
+                emotional_resonance,
+                extraversion,
+                agreeableness,
+                conscientiousness,
+                openness,
+                neuroticism,
+                creativity,
+                empathy,
+                assertiveness,
+                personality_plot,
+                interaction_plot,
+                emotion_dist_plot,
+                context_plot,
+                topic_coherence_plot
+            ]
+        )
+
+        # Apply slider changes
+        all_sliders = [
+            extraversion, agreeableness, conscientiousness,
+            openness, neuroticism, creativity, empathy, assertiveness
+        ]
+        for slider in all_sliders:
+            slider.change(
+                fn=apply_personality_changes,
+                inputs=all_sliders,
+                outputs=gr.Textbox(label="Status")
+            )
+
+        # Apply advanced settings changes
+        for setting in [adaptation_threshold, context_decay, 
+                       emotional_memory_days, personality_momentum]:
+            setting.change(
+                fn=update_advanced_settings,
+                inputs=[
+                    adaptation_threshold,
+                    context_decay,
+                    emotional_memory_days,
+                    personality_momentum
+                ],
+                outputs=gr.Textbox(label="Status")
+            )
 
     #
     # DEBUG
@@ -462,4 +807,5 @@ with gr.Blocks(theme=based_theme, title="Z-Waif UI") as demo:
 
 def launch_demo():
     demo.launch(server_port=7864)
+
 

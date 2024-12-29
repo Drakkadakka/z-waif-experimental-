@@ -44,7 +44,25 @@ from utils.user_context import get_user_context, update_user_context
 from utils.chat_history import get_chat_history, update_chat_history
 from utils.message_processing import clean_response
 
-from utils.logging import log_info, log_error
+from utils.logging import log_info, log_error, log_startup, app_logger
+import sys
+
+from utils.performance_metrics import track_performance, start_resource_monitoring, cleanup_logs
+
+# Start system resource monitoring
+start_resource_monitoring()
+
+# Schedule log cleanup (e.g., daily)
+import sched, time
+
+scheduler = sched.scheduler(time.time, time.sleep)
+
+def scheduled_cleanup(sc):
+    cleanup_logs('performance.log', days=7)
+    sc.enter(86400, 1, scheduled_cleanup, (sc,))
+
+scheduler.enter(86400, 1, scheduled_cleanup, (scheduler,))
+threading.Thread(target=scheduler.run, daemon=True).start()
 
 async def main_twitch_chat(message_data):
     """
@@ -92,6 +110,13 @@ async def main_twitch_chat(message_data):
 
 # noinspection PyBroadException
 def main():
+    try:
+        log_startup()
+        # Your existing startup code here
+        app_logger.info("Application started successfully")
+    except Exception as e:
+        app_logger.error("Failed to start application", exc_info=True)
+        sys.exit(1)
 
     while True:
         print("You" + colorama.Fore.GREEN + colorama.Style.BRIGHT + " (mic) " + colorama.Fore.RESET + ">", end="", flush=True)

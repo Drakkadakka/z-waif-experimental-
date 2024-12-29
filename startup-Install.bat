@@ -10,26 +10,23 @@ set "LOG_FILE=%SCRIPT_DIR%\log.txt"
 REM Change to the script directory
 cd /d "%SCRIPT_DIR%"
 
-REM Create and activate the main virtual environment
-python -m venv venv
-call venv\Scripts\activate
+REM Check if the virtual environment is already activated
+if not defined VIRTUAL_ENV (
+    REM Create and activate the main virtual environment
+    python -m venv venv
+    call venv\Scripts\activate
+)
 
-
-REM Install PyTorch, torchvision, and torchaudio from a specific index URL
+REM Install core dependencies first
 python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 2>> "%LOG_FILE%"
+python -m pip install --upgrade pywin32
+python -m pip install werkzeug==2.2.3 2>> "%LOG_FILE%"
+python -m pip install flask==2.2.5 2>> "%LOG_FILE%"
 
-REM Install openai-whisper from the GitHub repository
+REM Install whisper after core dependencies
 python -m pip install git+https://github.com/openai/whisper.git 2>> "%LOG_FILE%"
 
-REM Install Greenlet - SCF (Transferr to V2, was causing issues, check log)
-python -m pip install --upgrade pywin32
-REM python -m pip install --upgrade pip
-REM python -m pip install greenlet
-REM python -m pip install websockets~=11.0
-REM python -m pip install sounddevice
-REM python -m pip install opencv-python
-
-REM Install the remaining dependencies from requirements.txt
+REM Install the remaining dependencies
 python -m pip install -r requirements.txt 2>> "%LOG_FILE%"
 
 pause

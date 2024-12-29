@@ -141,43 +141,110 @@ To set up and use the Plugin SDK, follow these steps:
    ```
 
 ## Changelog
+
+### V2.2
+- VTube Studio Integration Improvements
+  - Added robust error handling for VTube Studio connection failures
+  - Implemented graceful fallback when VTube Studio is not running
+  - Added connection state management and automatic reconnection
+  - Enhanced emotion-to-expression mapping system
+  - Improved performance with lazy initialization
+  - Added connection attempt limiting to prevent resource drain
+
+- Performance Optimizations
+  - Implemented lazy loading for resource-heavy integrations
+  - Added connection pooling for better resource management
+  - Enhanced error isolation to prevent cascading failures
+  - Improved logging system with better error categorization
+  - Added resource usage monitoring and cleanup
+
+- Stability Enhancements
+  - Added system-wide error boundary implementation
+  - Improved module initialization sequence
+  - Enhanced cross-module communication reliability
+  - Added automatic recovery mechanisms for common failure modes
+  - Implemented better state management across integrations
+
+- Added comprehensive logging system:
+  - Added `track_response_time` decorator for performance monitoring
+  - Added `log_startup()` function for application initialization logging
+  - Added file-based logging with automatic log directory creation
+  - Added structured logging with timestamp and log levels
+  - Added global debug, RAG, and temperature logging capabilities
+  
+- Improved configuration system:
+  - Added dataclass-based configuration
+  - Added support for hot-reloading configuration
+  - Added JSON-based config persistence
+  - Separated RP Suppression and Newline Cut controls
+  - Added independent UI toggles for RP Suppression and Newline Cut
+  - Added environment variable support for default settings
+  - Improved stopping strings organization with categorical structure
+  - Added message length validation with debug logging
+  - Optimized RP Suppression threshold for better accuracy
+
+### V2.1
+- Performance Metrics Tracking
+  - Implemented a comprehensive performance metrics tracking system to monitor the application's efficiency and responsiveness.
+  - Added logging for key performance indicators, including response times and resource usage.
+  - Introduced a real-time performance metrics dashboard with:
+    - Response time tracking and analysis
+    - CPU and memory usage monitoring
+    - Automatic performance data logging
+    - Resource usage history tracking
+  - Enhanced the overall user experience by ensuring smoother interactions and quicker response times.
+  - Added function-level performance tracking using decorators
+  - Implemented automatic cleanup of old performance data
+  - Added system resource monitoring with alerts for high usage
+
+- Emotion Recognition Enhancements
+  - Improved accuracy by refining the model and incorporating new training data.
+  - Enhanced the emotional response system to better reflect detected emotions in interactions.
+
+- Dynamic Personality Adjustments
+  - Introduced algorithms for adjusting personality based on user feedback and interaction history.
+  - Improved adaptability of AI responses to better match user preferences and emotional states.
+
+
 ### V2.0
-- Dynamic Expression Mapping
-  - Expanded the `DynamicExpressionMapper` to include a wider range of expressions for more nuanced emotional representation.
-  - Integrated dynamic expression mapping with VTube Studio to reflect emotions in real-time.
+Dynamic Expression Mapping
 
-- VTube Studio Enhancements
-  - Added support for setting expressions in VTube Studio based on detected emotions.
-  - Improved integration with VTube Studio for real-time emotion-based expression changes.
+Expanded the DynamicExpressionMapper to include a wider range of expressions for more nuanced emotional representation.
+Integrated dynamic expression mapping with VTube Studio to reflect emotions in real-time.
+VTube Studio Enhancements
 
-- General Improvements
-  - Enhanced modularity and error handling across various modules.
-  - Improved memory management and resource cleanup processes.
-  - Added new experimental features for multi-model conversation mixing and dynamic personality evolution.
+Added support for setting expressions in VTube Studio based on detected emotions.
+Improved integration with VTube Studio for real-time emotion-based expression changes.
+General Improvements
 
-- Custom Personality Templates
-  - Implemented a system to create and manage custom personality templates.
-  - Added methods to add, retrieve, and use personality templates in interactions.
+Enhanced modularity and error handling across various modules.
+Improved memory management and resource cleanup processes.
+Added new experimental features for multi-model conversation mixing and dynamic personality evolution.
+Custom Personality Templates
 
-- Complex Context-Aware Emotional Responses
-  - Enhanced the emotional response generation to consider user context and previous messages.
-  - Improved sentiment analysis for more nuanced interactions.
+Implemented a system to create and manage custom personality templates.
+Added methods to add, retrieve, and use personality templates in interactions.
+Complex Context-Aware Emotional Responses
 
-- Voice Tone Mapping
-  - Implemented voice tone matching to enhance emotional responses based on audio analysis.
+Enhanced the emotional response generation to consider user context and previous messages.
+Improved sentiment analysis for more nuanced interactions.
+Voice Tone Mapping
 
-- Enhanced User Experience
-  - Improved UI feedback for emotional responses and plugin actions.
-  - Enhanced visual representation of emotional states during interactions.
+Implemented voice tone matching to enhance emotional responses based on audio analysis.
+Enhanced User Experience
 
-- New Features
-  - Introduced a feedback mechanism for users to provide input on AI responses, allowing for continuous improvement of the system.
-  - Added support for additional platforms, enhancing the versatility of the AI assistant.
-  - Implemented logging features for better tracking of interactions and system performance.
+Improved UI feedback for emotional responses and plugin actions.
+Enhanced visual representation of emotional states during interactions.
+New Features
 
-- Bug Fixes and Performance Improvements
-  - Fixed various bugs related to memory management and emotional response generation.
-  - Optimized performance for real-time emotion recognition and processing.
+Introduced a feedback mechanism for users to provide input on AI responses, allowing for continuous improvement of the system.
+Added support for additional platforms, enhancing the versatility of the AI assistant.
+Implemented logging features for better tracking of interactions and system performance.
+Bug Fixes and Performance Improvements
+
+Fixed various bugs related to memory management and emotional response generation.
+Optimized performance for real-time emotion recognition and processing.
+
 
 ### V1.9
 - Streamlined the codebase, removing unused and outdated sections of features
@@ -450,7 +517,7 @@ V1.0
 ### Analytics & Export
 - [ ] Conversation analytics and insights
 - [ ] Export tools for content creation
-- [ ] Performance metrics tracking
+- [ ] Full Performance metrics tracking
 - [ ] Usage statistics dashboard
 
 ### Experimental Features
