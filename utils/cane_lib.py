@@ -1,8 +1,13 @@
 import re
 import utils.logging
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Quick lil function to check if any keywords are in a piece of text
 def keyword_check(phrase, keywords):
+    logging.info(f"Checking keywords in phrase: {phrase}.")
     for k in keywords:
         if str.lower(k) in str.lower(phrase):
             return True

@@ -4,15 +4,21 @@ from datetime import datetime
 from utils.contextual_memory import ContextualMemory
 from utils.character_relationships import CharacterRelationshipManager
 from utils.chat_history import update_chat_history
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class EnhancedMemorySystem:
     def __init__(self):
+        logging.info("Initializing EnhancedMemorySystem.")
         self.memory_manager = MemoryManager()
         self.chat_learner = ChatLearner()
         self.contextual_memory = ContextualMemory()
         self.relationship_manager = CharacterRelationshipManager()  # Initialize relationship manager
 
     async def process_interaction(self, message_data, platform):
+        logging.info(f"Processing interaction for platform: {platform}.")
         """Process and store interaction data with enhanced context"""
         # Learn from message
         self.chat_learner.learn_from_message(message_data)

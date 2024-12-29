@@ -1,9 +1,14 @@
 import json
 import os
 from datetime import datetime, timedelta
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class MemoryHandler:
     def __init__(self, platform, memory_file="user_memories.json"):
+        logging.info("Initializing MemoryHandler.")
         self.platform = platform
         self.memory_file = memory_file
         self.memories = self._load_memories()
@@ -41,6 +46,7 @@ class MemoryHandler:
         self.save_memories()
     
     def update_user_memory(self, user_id, interaction_data):
+        logging.info(f"Updating user memory for user: {user_id}.")
         current_time = datetime.now()
         
         if user_id not in self.memories:

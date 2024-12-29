@@ -3,7 +3,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import torch
 
 # Configure logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 try:
@@ -14,6 +14,7 @@ except ImportError as e:
     logger.info("Please install required packages using: pip install transformers torch bitsandbytes")
 
 def setup_model_config():
+    logging.info("Setting up model configuration.")
     quantization_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_compute_dtype=torch.float16,
@@ -29,6 +30,7 @@ def setup_model_config():
     return model_config
 
 def load_model():
+    logging.info("Loading model.")
     config = setup_model_config()
     model = AutoModelForCausalLM.from_pretrained(
         config["model_id"],

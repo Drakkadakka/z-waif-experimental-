@@ -3,7 +3,11 @@ import random
 import API.Oogabooga_Api_Support
 import utils.logging
 import os
+import logging
+from utils.logging import log_info, log_error
 
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 summary_tokens_count = 310
 search_point_size = 16
@@ -14,6 +18,7 @@ char_name = os.environ.get("CHAR_NAME")
 
 # remembers a random past event
 def retrospect_random_mem_summary():
+    log_info("Generating random memory summary.")
     history = utils.based_rag.history_database
 
     # find random point in history to think about (not including anything recently)

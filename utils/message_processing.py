@@ -1,8 +1,13 @@
 import numpy as np
 from utils.emotion_recognizer import recognize_emotion_from_text, recognize_emotion_from_audio
 from utils.transcriber_translate import analyze_audio_emotion
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def process_input(input_data):
+    logging.info(f"Processing input data: {input_data}.")
     """Process text or audio input and return recognized emotion."""
     if input_data['type'] == 'text':
         # For text input
@@ -15,6 +20,7 @@ def process_input(input_data):
     return None, None
 
 def clean_response(response: str) -> str:
+    logging.info("Cleaning response.")
     """Clean and format AI response for Twitch chat."""
     response = ' '.join(response.split())
     

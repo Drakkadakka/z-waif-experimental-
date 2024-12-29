@@ -12,10 +12,14 @@ import utils.api as API  # Adjust the import based on your project structure
 import librosa
 import numpy as np
 from scipy.io import wavfile
+import logging
 
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class DiscordVoiceHandler:
     def __init__(self, client):
+        logging.info("Initializing DiscordVoiceHandler.")
         self.client = client
         self.voice_clients = {}
         self.audio_queue = {}
@@ -233,3 +237,7 @@ class DiscordVoiceHandler:
         elif tone == 'sad':
             self.set_emote_string("*sad*")
         # Add more conditions as needed
+
+    async def handle_voice(self, data):
+        logging.info("Handling voice data.")
+        # ... existing code ...

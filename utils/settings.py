@@ -1,3 +1,8 @@
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 hotkeys_locked = False
 speak_shadowchats = False
 
@@ -56,3 +61,21 @@ DISCORD_VOICE_COMMANDS = {
     "stop": "Stop current audio",
     "help": "Show command list"
 }
+
+# Streaming Settings
+ENABLE_STREAMING = True  # Can be overridden by .env
+STREAM_CHUNK_SIZE = 8
+MAX_MESSAGE_LENGTH = 2000
+MIN_MESSAGE_LENGTH = 10
+
+# RP Settings
+RP_SUPPRESSION_THRESHOLD = 3  # Lowered threshold for RP suppression
+RP_SUPPRESSION_ENABLED = False  # Can be toggled independently
+NEWLINE_CUT_ENABLED = True     # Can be toggled independently
+
+# Stopping strings configuration 
+SYSTEM_STOPPING_STRINGS = ["[System:", "[Assistant:", "[Human:"]
+CHAT_STOPPING_STRINGS = ["User:", "Human:", "Assistant:"]
+RP_STOPPING_STRINGS = ["*", "[", "]"]
+
+logging.info("Settings loaded.")

@@ -13,3 +13,12 @@
 #
 # Comes with [current pipeflow spot, pipe ID, pipe type]
 cur_states = [["Idle", 0, "None"], ["Idle", 0, "Discord"]]
+
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def some_function():
+    logging.info("Some function executed.")
+    # ... existing code ...

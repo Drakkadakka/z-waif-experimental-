@@ -3,8 +3,12 @@ import numpy as np
 from datetime import datetime
 import logging
 
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 class MultiprocessRAG:
     def __init__(self, embedding_model, chunk_size=1000, max_workers=None):
+        logging.info("Initializing MultiprocessRAG.")
         self.chunk_size = chunk_size
         self.embedding_model = embedding_model
         self.max_workers = max_workers or (cpu_count() - 1)
@@ -23,7 +27,7 @@ class MultiprocessRAG:
             return None
             
     def process_documents(self, documents):
-        """Process multiple documents in parallel"""
+        logging.info("Processing documents.")
         chunks = self._split_documents(documents)
         
         with Pool(processes=self.max_workers) as pool:

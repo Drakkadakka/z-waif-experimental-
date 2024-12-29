@@ -1,44 +1,82 @@
 import logging
-import datetime
+from datetime import datetime
+import os
+import time
+from functools import wraps
+from typing import Callable, Any
 
-# Create a logger
-logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+app_logger = logging.getLogger('app')
 
-# Define log variables
-debug_log = ""
-rag_log = ""
-kelvin_log = ""
+# Create logs directory if it doesn't exist
+os.makedirs('logs', exist_ok=True)
 
-def log_debug(message):
+# Add file handler
+file_handler = logging.FileHandler('logs/app.log')
+file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+app_logger.addHandler(file_handler)
+
+debug_log = "General Debug log will go here!\n\nAnd here!"
+rag_log = "RAG log will go here!"
+kelvin_log = "Live temperature randomness will go here!"
+
+def track_response_time(func: Callable[..., Any]) -> Callable[..., Any]:
+    """Decorator to track and log the response time of a function"""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        duration = end_time - start_time
+        log_info(f"{func.__name__} took {duration:.2f} seconds")
+        return result
+    return wrapper
+
+def log_startup():
+    """Log application startup information"""
+    app_logger.info("=" * 50)
+    app_logger.info(f"Application starting at {datetime.now()}")
+    app_logger.info("System initialization beginning...")
+
+def log_info(message: str):
+    """Log info level message"""
+    app_logger.info(message)
+
+def log_error(message: str):
+    """Log error level message"""
+    app_logger.error(message)
+    update_debug_log(f"ERROR: {message}")
+
+def update_debug_log(text: str):
     global debug_log
-    debug_log += f"{message}\n"
-    logger.debug(message)
+    debug_log += "\n" + str(text)
 
-def log_info(message):
-    logger.info(message)
-
-def log_error(message):
-    logger.error(message)
-
-def update_rag_log(message):
+def update_rag_log(text: str):
     global rag_log
-    rag_log += f"{message}\n"
-    logger.info(message)
+    rag_log += "\n" + str(text)
 
 def clear_rag_log():
     global rag_log
-    rag_log = ""  # Clear the rag_log
-    logger.info("RAG log cleared.")
+    rag_log = ""
 
-def update_debug_log(message: str, log_file: str = "debug.log") -> None:
-    """
-    Updates the debug log file with a timestamped message
-    
-    Args:
-        message (str): The message to log
-        log_file (str): The path to the log file (defaults to debug.log)
-    """
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(log_file, 'a', encoding='utf-8') as f:
-        f.write(f"[{timestamp}] {message}\n")
+def update_kelvin_log(text: str):
+    global kelvin_log
+    kelvin_log = text
+
+def log_message_length_warning(message: str, length: int, type_str: str):
+    """Log warning about message length"""
+    if length < 10:
+        warning = f"Message too short ({length} chars): {message[:50]}..."
+        log_error(warning)
+        update_debug_log(warning)
+    elif length > 2000:
+        warning = f"Message too long ({length} chars): {message[:50]}..."
+        log_error(warning)
+        update_debug_log(warning)
+
+def log_stream_status(enabled: bool):
+    """Log streaming status changes"""
+    status = "enabled" if enabled else "disabled"
+    log_info(f"Streaming mode {status}")
+    update_debug_log(f"Streaming mode {status}")

@@ -3,6 +3,10 @@ import datetime
 import utils.settings
 import os
 import json
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 ALARM_TRIGGERED = False
 ALARM_READY = False
@@ -16,6 +20,7 @@ with open("Configurables/AlarmMessage.json", 'r') as openfile:
 
 
 def alarm_loop():
+    logging.info("Starting alarm loop.")
     global ALARM_TRIGGERED, ALARM_READY, ALARM_MESSAGE
 
     while True:

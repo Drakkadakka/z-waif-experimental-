@@ -8,6 +8,15 @@ import os
 import time
 import utils.logging
 import utils.settings
+from sentence_transformers import SentenceTransformer
+from typing import List, Dict
+import numpy as np
+from scipy.spatial.distance import cosine
+from datetime import datetime
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Words and their data
 word_database = {
@@ -621,4 +630,40 @@ def word_value_passive_calculation():
 
         if not is_setting_up:
             calc_word_values()
+
+
+class RAGProcessor:
+    def __init__(self, model_name='all-MiniLM-L6-v2', memory_file='long_term_memory.json'):
+        self.embedding_model = SentenceTransformer(model_name)
+        self.memory_file = memory_file
+        self.memories = self._load_memories()
+
+    def _load_memories(self):
+        if os.path.exists(self.memory_file):
+            with open(self.memory_file, 'r') as f:
+                return json.load(f)
+        return []
+
+    def save_memories(self):
+        logging.info("Saving memories to file.")
+        with open(self.memory_file, 'w') as f:
+            json.dump(self.memories, f, indent=2)
+
+    def process_documents(self, texts):
+        embeddings = self.embedding_model.encode(texts)
+        for text, embedding in zip(texts, embeddings):
+            memory = {
+                'text': text,
+                'embedding': embedding.tolist(),
+                'timestamp': datetime.now().isoformat()
+            }
+            self.memories.append(memory)
+        self.save_memories()
+
+    def retrieve_relevant(self, query, top_k=5):
+        query_embedding = self.embedding_model.encode(query)
+        similarities = [1 - np.dot(query_embedding, np.array(memory['embedding'])) for memory in self.memories]
+        memory_scores = list(zip(self.memories, similarities))
+        memory_scores.sort(key=lambda x: x[1], reverse=True)
+        return [memory['text'] for memory, score in memory_scores[:top_k] if score > 0]
 

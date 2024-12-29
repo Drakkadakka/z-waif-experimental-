@@ -2,6 +2,11 @@ import numpy as np
 import sounddevice as sd
 from numba.cuda.libdevice import trunc
 from sympy import false
+import logging
+from utils.logging import log_info, log_error
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 duration = 10 #in seconds
 
@@ -17,6 +22,7 @@ no_mic = False
 
 
 def audio_callback(indata, frames, time, status):
+    log_info("Audio callback triggered.")
     global VOL_LISTENER_LEVEL
 
     if no_mic:

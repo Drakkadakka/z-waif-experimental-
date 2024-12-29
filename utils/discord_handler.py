@@ -1,12 +1,21 @@
 from ai_handler import AIHandler
+from utils.performance_metrics import track_performance
+import logging
+from utils.logging import log_info, log_error
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class DiscordHandler:
     def __init__(self):
+        log_info("Initializing DiscordHandler.")
         self.ai = AIHandler()
         self.speak_shadowchats = True
         
+    @track_performance
     async def process(self, message_data):
         """Process messages from Discord"""
+        log_info(f"Processing message data: {message_data}.")
         try:
             print(f"Message Data: {message_data}")  # Debugging line
             if message_data.get('needs_ai_response', False):
@@ -32,6 +41,7 @@ class DiscordHandler:
             print(f"Error processing message: {e}")
         return None
         
+    @track_performance
     def _format_prompt(self, content):
         return f"User: {content}\nAssistant: " 
 

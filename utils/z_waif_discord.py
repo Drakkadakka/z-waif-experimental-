@@ -10,13 +10,20 @@ from utils import settings
 from .discord_voice_handler import DiscordVoiceHandler
 import yt_dlp
 import requests  # Make sure to import requests or any other library you use for API calls
+import logging
+from utils.logging import log_info, log_error
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class DiscordClient(commands.Bot):
     def __init__(self):
+        log_info("Initializing Discord Client...")
         intents = discord.Intents.default()
         intents.message_content = True
         super().__init__(command_prefix='/', intents=intents)
         self.voice_handler = DiscordVoiceHandler(self)
+        log_info("Discord Client initialized.")
         
     async def setup_hook(self):
         print("Setting up command tree...")
@@ -248,12 +255,16 @@ class DiscordClient(commands.Bot):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        if message.author == self.user:
-            return  # Ignore messages from the bot itself
+        try:
+            log_info(f"Received message: {message.content}")
+            if message.author == self.user:
+                return  # Ignore messages from the bot itself
 
-        # Process the message and generate a response
-        response = await self.generate_response(message.content)
-        await message.channel.send(response)
+            # Process the message and generate a response
+            response = await self.generate_response(message.content)
+            await message.channel.send(response)
+        except Exception as e:
+            log_error(f"Error processing message: {e}")
 
     async def generate_response(self, content):
         """Send the content to the Oogabooga API and return the response."""
@@ -272,12 +283,12 @@ class DiscordClient(commands.Bot):
             return "Sorry, I couldn't process that."
 
 def run_z_waif_discord():
-    print("Starting Discord bot...")
+    log_info("Starting Discord bot...")
     DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN")
     if not DISCORD_TOKEN:
-        print("Error: DISCORD_TOKEN not found in environment variables")
+        log_error("Error: DISCORD_TOKEN not found in environment variables")
         return
         
     client = DiscordClient()
-    print("Running client...")
+    log_info("Running Discord client...")
     client.run(DISCORD_TOKEN)

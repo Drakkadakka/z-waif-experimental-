@@ -1,6 +1,10 @@
 import utils.cane_lib
 import json
 import utils.logging
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 do_log_lore = True
 total_lore_default = "Here is some lore about the current topic from your lorebook;\n\n"
@@ -12,27 +16,28 @@ with open("Configurables/Lorebook.json", 'r') as openfile:
 
 
 # For retreival
-# def lorebook_check(message):
-#     global LORE_BOOK
-#
-#     # Lockout clearing
-#     for lore in LORE_BOOK:
-#         if lore['2'] > 0:
-#             lore['2'] -= 1
-#
-#     # Search for new ones
-#     for lore in LORE_BOOK:
-#         if utils.cane_lib.keyword_check(message, [" " + lore['0']]) and lore['2'] == 0:
-#             # Set our lockout
-#             lore['2'] += 9
-#
-#             # Make our info
-#
-#             combo_lore = lore['0'] + ", " + lore['1']
-#
-#             return combo_lore
-#
-#     return "No lore!"
+def lorebook_check(message):
+    logging.info(f"Checking lorebook for message: {message}.")
+    global LORE_BOOK
+
+    # Lockout clearing
+    for lore in LORE_BOOK:
+        if lore['2'] > 0:
+            lore['2'] -= 1
+
+    # Search for new ones
+    for lore in LORE_BOOK:
+        if utils.cane_lib.keyword_check(message, [" " + lore['0']]) and lore['2'] == 0:
+            # Set our lockout
+            lore['2'] += 9
+
+            # Make our info
+
+            combo_lore = lore['0'] + ", " + lore['1']
+
+            return combo_lore
+
+    return "No lore!"
 
 # Gathers ALL lore in a given scope (send in the message being sent, as well as any message pairs you want to check)
 def lorebook_gather(messages, sent_message):

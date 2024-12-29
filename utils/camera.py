@@ -4,10 +4,14 @@ import cv2
 import tkinter
 from tkinter import filedialog
 import os
+import logging
 
 import utils.settings
 import utils.vtube_studio
 import random
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # initialize the camera
 # If you have multiple camera connected with
@@ -29,6 +33,7 @@ root.withdraw() #use to hide tkinter window
 
 
 def capture_pic():
+    logging.info("Capturing image.")
 
     # reading the input using the camera
     result, image = cam.read()
@@ -54,6 +59,7 @@ def capture_pic():
 
 
 def use_image_feed():
+    logging.info("Using image feed.")
 
     # Read the feed, Sneed
     image = cv2.imread(browse_feed_image())

@@ -1,4 +1,5 @@
 import os
+import logging
 
 import keyboard
 import mouse
@@ -8,6 +9,8 @@ import utils.alarm
 import utils.volume_listener
 import utils.settings
 
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 RATE_PRESSED = False
 
@@ -365,4 +368,9 @@ def chat_input_await():
 
         else:
             time.sleep(0.02)
+
+
+def check_hotkeys():
+    logging.info("Checking hotkeys.")
+    # ... existing code ...
 

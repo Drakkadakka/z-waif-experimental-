@@ -3,9 +3,14 @@ import os
 from datetime import datetime, timedelta
 from chat.learner import ChatLearner
 from memory.manager import MemoryManager
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class ContextualMemory:
     def __init__(self, memory_file="user_context_memory.json"):
+        logging.info("Initializing ContextualMemory.")
         self.memory_file = memory_file
         self.context_memory = self._load_memory()
 
@@ -20,6 +25,7 @@ class ContextualMemory:
             json.dump(self.context_memory, f, indent=2)
 
     def update_context(self, user_id, context_data):
+        logging.info(f"Updating context for user: {user_id}.")
         if user_id not in self.context_memory:
             self.context_memory[user_id] = {
                 "last_updated": datetime.now().isoformat(),

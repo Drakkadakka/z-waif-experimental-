@@ -8,6 +8,11 @@ from PIL import Image  # Import Pillow for image processing
 import requests  # Ensure requests is imported for downloading
 import cv2  # Ensure OpenCV is imported
 from textblob import TextBlob  # Import TextBlob for sentiment analysis
+import logging
+from utils.logging import log_info, log_error
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 MEMORY_CLEANUP_FREQUENCY = 10  # Set your desired frequency in minutes
 
@@ -18,6 +23,7 @@ class Oogabooga_Api_Support:
 
     @staticmethod
     def send_via_oogabooga(content):
+        log_info(f"Sending content to Oogabooga: {content}.")
         # Implement the logic to send content to the Oogabooga API
         print(f"Sending to Oogabooga: {content}")
         # Here you would typically make an API call
@@ -242,3 +248,12 @@ class Oogabooga_Api_Support:
                 print(f"Failed to connect to Discord: {e}")  # Log any connection errors
         else:
             print("Discord token not found. Please set the DISCORD_TOKEN in your .env file.")
+
+class APIHandler:
+    def __init__(self):
+        log_info("Initializing APIHandler.")
+        # Your existing code...
+
+    async def handle_request(self, request):
+        log_info(f"Handling request: {request}.")
+        # Your existing code...

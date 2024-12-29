@@ -1,12 +1,21 @@
 import asyncio
 import json
 import websockets
+from utils.performance_metrics import track_performance
+import logging
+from utils.logging import log_info, log_error
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class AIHandler:
     def __init__(self, host="localhost", port=5005):
+        log_info("Initializing AIHandler.")
         self.uri = f"ws://{host}:{port}/api/v1/stream"
         
+    @track_performance
     async def generate_response(self, prompt, max_tokens=150):
+        log_info(f"Generating response for prompt: {prompt}")
         request = {
             "prompt": prompt,
             "max_new_tokens": max_tokens,

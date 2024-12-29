@@ -1,9 +1,15 @@
 import json
 import os
 from datetime import datetime
+import logging
+from utils.logging import log_info, log_error
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class CharacterRelationshipManager:
     def __init__(self, relationship_file="data/relationships.json"):
+        log_info("Initializing CharacterRelationshipManager.")
         self.relationship_file = relationship_file
         self.relationships = self._load_relationships()
 
@@ -21,6 +27,7 @@ class CharacterRelationshipManager:
 
     def update_relationship(self, character_a, character_b, interaction_type):
         """Update the relationship between two characters based on interaction."""
+        log_info(f"Updating relationship between {character_a} and {character_b}.")
         if character_a not in self.relationships:
             self.relationships[character_a] = {}
         if character_b not in self.relationships[character_a]:

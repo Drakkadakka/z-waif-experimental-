@@ -1,5 +1,9 @@
 import json
 import os
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 converted_log_count = 0
 
@@ -8,6 +12,7 @@ converted_log_count = 0
 #
 
 def run_conversion():
+    logging.info("Running log conversion.")
     global converted_log_count
     # Initialize temp_log as a list or dictionary based on your needs
     temp_log = []  # or {} if you want to use a dictionary

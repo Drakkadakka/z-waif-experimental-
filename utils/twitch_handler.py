@@ -5,9 +5,15 @@ try:
     from sentence_transformers import SentenceTransformer
 except ImportError:
     raise ImportError("Please install sentence-transformers using: pip install sentence-transformers")
+import logging
+from utils.logging import log_info, log_error
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class TwitchHandler:
     def __init__(self):
+        log_info("Initializing TwitchHandler.")
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         rag_processor = MultiprocessRAG(embedding_model)
         self.memory_manager = MemoryManager(rag_processor)
@@ -15,6 +21,7 @@ class TwitchHandler:
         self.speak_shadowchats = True
         
     async def process(self, message_data):
+        log_info(f"Processing message data: {message_data}")
         if message_data.get('needs_ai_response', False):
             # Get relevant memories
             relevant_memories = await self.memory_manager.retrieve_relevant_memories(
@@ -52,4 +59,7 @@ Assistant: """
 
     async def speak_message(self, message):
         print(f"Speaking message: {message}")
+        
+    async def handle_message(self, message):
+        log_info(f"Handling message: {message}.")
         
