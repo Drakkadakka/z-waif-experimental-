@@ -1,34 +1,44 @@
-from utils.logging import track_response_time
 from datetime import datetime
-import logging
-
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+import json
+import os
 
 class MemoryManager:
-    def __init__(self):
-        logging.info("Initializing MemoryManager.")
-        self.memories = {}
+    def __init__(self, memory_file="user_memories.json"):
+        self.memory_file = memory_file
+        self.memories = self._load_memories()
         
-    @track_response_time
-    def add_memory(self, author, context, platform):
-        if author not in self.memories:
-            self.memories[author] = []
-        self.memories[author].append({
-            "context": context,
-            "platform": platform
-        }) 
+    def _load_memories(self):
+        if os.path.exists(self.memory_file):
+            with open(self.memory_file, 'r') as f:
+                return json.load(f)
+        return {}
 
-    @track_response_time
-    def store_emotional_state(self, user_id, emotion, intensity):
+    def add_memory(self, user_id, context, platform, emotion=None, interaction_type=None):
         if user_id not in self.memories:
-            self.memories[user_id] = []
-        self.memories[user_id].append({
-            "emotion": emotion,
-            "intensity": intensity,
-            "timestamp": datetime.now()
-        })
-
-    @track_response_time
-    def get_user_emotional_history(self, user_id):
-        return self.memories.get(user_id, []) 
+            self.memories[user_id] = {
+                'first_interaction': datetime.now().isoformat(),
+                'interactions': [],
+                'preferences': {},
+                'emotional_history': [],
+                'topics_of_interest': set()
+            }
+            
+        interaction = {
+            'timestamp': datetime.now().isoformat(),
+            'context': context,
+            'platform': platform,
+            'emotion': emotion,
+            'interaction_type': interaction_type
+        }
+        
+        self.memories[user_id]['interactions'].append(interaction)
+        self._save_memories()
+        
+    def get_user_context(self, user_id):
+        if user_id not in self.memories:
+            return None
+        return self.memories[user_id]
+        
+    def _save_memories(self):
+        with open(self.memory_file, 'w') as f:
+            json.dump(self.memories, f, indent=4)
